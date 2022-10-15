@@ -1,0 +1,398 @@
+html, body
+  -webkit-overflow-scrolling: touch
+
+body
+	// font-family: $font-family-base
+	// font-size: $default-font-size
+	// font-style: normal
+	// line-height: $default-line-height
+	color: $default-text-color
+	background: $color-white
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	-webkit-backface-visibility: hidden
+	-webkit-tap-highlight-color: transparent
+	font-weight: 400
+	+max-screen($breakpoint-xl)
+
+h1, .h1
+	line-height: 110%
+	font-size: 171px
+	font-family: $font-family-title
+	font-weight: 700
+	+max-screen($breakpoint-xm)
+		font-size: 56px
+	+max-screen(1200px)
+		font-size: 48px
+	+max-screen(360px)
+		font-size: 40px
+h2, .h2
+	font-size: 78px
+	line-height: 110%
+	font-family: $font-family-title
+	font-weight: 700
+	+max-screen(1640px)
+		font-size: 58px
+	+max-screen($breakpoint-xm)
+		font-size: 44px
+	+max-screen(1200px)
+		font-size: 36px
+	+max-screen($breakpoint-sm)
+		font-size: 28px
+	+max-screen(360px)
+		font-size: 22px
+h3, .h3
+	font-weight: 700
+	font-size: 49px
+	line-height: 120%
+	font-family: $font-family-title
+	+max-screen(1200px)
+		font-size: 18px
+h4, .h4
+	font-weight: 700
+	font-size: 18px
+	line-height: 112%
+	font-family: $font-family-title
+h5, .h5
+	font-family: $font-family-title
+	line-height: 112%
+	font-weight: 700
+	font-size: 16px
+h6, .h6
+	font-family: $font-family-title
+	font-weight: 700
+	font-size: 16px
+	line-height: 112%
+
+p,.p
+	font-size: $default-font-size
+	line-height: $default-line-height
+	+max-screen(1510px)
+		font-size: $default-font-size-min
+	+max-screen(1200px)
+		font-size: $default-font-size-mob
+.text
+	&--style
+	&--size--10,&--size--10 *
+		font-size: 10px
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 10px
+	&--size--12,&--size--12 *
+		font-size: 12px
+
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 12px
+	&--size--13,&--size--13 *
+		font-size: 13px
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 12px
+	&--size--14,&--size--14 *
+		font-size: 14px
+		line-height: 120.5%
+		+max-screen(1500px)
+			font-size: 14px
+		+max-screen($breakpoint-md)
+			font-size: 14px
+	&--size--16,&--size--16 *
+		font-size: 16px
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: 14px
+	&--size--17,&--size--17 *
+		font-size: 17px
+		+max-screen($breakpoint-lg)
+		+max-screen($breakpoint-md)
+			font-size: rem(14px)
+	&--size--20,&--size--20 *
+		font-size: 20px
+		+max-screen($breakpoint-xl)
+			font-size: 16px
+		+max-screen($breakpoint-md)
+			font-size: 16px
+	&--size--29,&--size--29 *
+		font-size: 29px
+		+max-screen($breakpoint-xl)
+			font-size: 24px
+		+max-screen(1200px)
+			font-size: 18px
+	&--size--30,&--size--30 *
+		font-size: 30px
+		+max-screen(1640px)
+			font-size: 24px
+		+max-screen(1200px)
+			font-size: 20px
+	&--size--37,&--size--37 *
+		font-size: 37px
+		+max-screen($breakpoint-xxl)
+			font-size: 32px
+		+max-screen($breakpoint-xm)
+			font-size: 28px
+		+max-screen(1200px)
+			font-size: 20px
+	&--size--39,&--size--39 *
+		font-size: 39px
+		+max-screen($breakpoint-xxl)
+			font-size: 34px
+		+max-screen($breakpoint-xm)
+			font-size: 30px
+		+max-screen(1200px)
+			font-size: 20px
+	&--size--49,&--size--49 *
+		font-size: 49px
+		+max-screen($breakpoint-xl)
+			font-size: 40px
+		+max-screen($breakpoint-xm)
+			font-size: 34px
+		+max-screen($breakpoint-sm)
+			font-size: 20px
+	&--size--52,&--size--52 *
+		font-size: 52px
+		+max-screen(1640px)
+			font-size: 32px
+		+max-screen($breakpoint-xm)
+			font-size: 22px
+	&--size--59,&--size--59 *
+		font-size: 59px
+		+max-screen(1640px)
+			font-size: 39px
+		+max-screen($breakpoint-xm)
+			font-size: 29px
+		+max-screen($breakpoint-md)
+			font-size: 20px
+	&--size--75,&--size--75 *
+		font-size: 75px
+		+max-screen(1640px)
+			font-size: 59px
+		+max-screen($breakpoint-xm)
+			font-size: 35px
+		+max-screen($breakpoint-sm)
+			font-size: 24px
+	&--size--100,&--size--100 *
+		font-size: 100px
+		+max-screen(1640px)
+			font-size: 80px
+		+max-screen($breakpoint-xl)
+			font-size: 50px
+		+max-screen($breakpoint-sm)
+			font-size: 30px
+	&--size--117,&--size--117 *
+		font-size: 117px
+		+max-screen(1640px)
+			font-size: 100px
+		+max-screen($breakpoint-xl)
+			font-size: 80px
+		+max-screen($breakpoint-xm)
+			font-size: 74px
+		+max-screen($breakpoint-sm)
+			font-size: 34px
+	&--size--145,&--size--145 *
+		font-size: 145px
+		+max-screen($breakpoint-xxl)
+			font-size: 100px
+		+max-screen(1640px)
+			font-size: 90px
+		+max-screen($breakpoint-xl)
+			font-size: 80px
+		+max-screen($breakpoint-xm)
+			font-size: 70px
+		+max-screen(1200px)
+			font-size: 50px
+		+max-screen($breakpoint-sm)
+			font-size: 34px
+	&--size--147,&--size--147 *
+		font-size: 147px
+		+max-screen($breakpoint-xxl)
+			font-size: 117px
+		+max-screen($breakpoint-xl)
+			font-size: 77px
+		+max-screen($breakpoint-xm)
+			font-size: 67px
+		+max-screen(1200px)
+			font-size: 50px
+		+max-screen($breakpoint-sm)
+			font-size: 34px
+	&--default,&--default *
+		font-size: rem(16px)
+		line-height: 1.2em
+	&--uppercase
+		text-transform: uppercase
+	&--left
+		text-align: left
+	&--right
+		text-align: right
+	&--center
+		text-align: center
+	&--underline
+		text-decoration: underline
+
+.font
+	&--italic
+		font-style: italic
+	&--weight
+		&--thin
+			font-weight: 100
+		&--light
+			font-weight: 300
+		&--regular
+			font-weight: 400
+		&--medium
+			font-weight: 600
+		&--bold
+			font-weight: 800
+		&--black
+			font-weight: 900
+
+.title
+
+.link--underline
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 1px
+		background-color: $color-primary
+		transition: 0.2s ease-out
+	&:hover:before
+		width: 0
+
+.link--underline--2
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 0
+		height: 1px
+		background-color: $color-primary
+		transition: 0.2s ease-out
+	&:hover:before
+		width: 100%
+
+.content-block
+	&.font--size--14
+		p,li,a
+			font-size: 14px
+			line-height: 120.5%
+	p
+		margin-bottom: 20px
+
+		&:nth-child(1)
+			padding-top: 0
+
+		&:nth-last-child(1)
+			padding-bottom: 0
+			margin-bottom: 0
+
+	h1,h2,h3,h4,h5,h6
+		margin-top: 50px
+		margin-bottom: 30px
+		+max-screen(1500px)
+			margin-top: 40px
+			margin-bottom: 20px
+		&:first-of-type
+			margin-top: 0
+
+	p,ul,ol
+		color: $color-primary
+
+	a
+		transition: 0.3s
+		color: $color-primary
+		font-weight: 500
+		&:hover
+			opacity: 0.8
+			text-decoration: underline
+	a.button
+		&:hover
+			text-decoration: none
+	ul
+		margin: rem(15px 0)
+		margin-left: rem(30px)
+		li
+			display: block
+			//padding-left: 25px
+			margin-bottom: 10px
+			line-height: 1.4
+			&:nth-last-child(1)
+				margin-bottom: 0
+			&:before
+				content: ''
+				background-color: $color-primary
+				width: 5px
+				height: 5px
+				min-width: 5px
+				border-radius: 50%
+				margin-right: 10px
+				margin-bottom: 0.12em
+				display: inline-block
+			ol
+				margin: rem(10px 0)
+			ul
+				margin: rem(10px 0)
+				margin-left: rem(30px)
+	ol
+		list-style: none
+		counter-reset: my-counter
+		margin: rem(15px 0)
+		li
+			counter-increment: my-counter
+			padding-left: 25px
+			margin-bottom: 10px
+			&:nth-last-child(1)
+				margin-bottom: 0
+			&:before
+				content: counter(my-counter) "."
+				color: $color-primary
+				margin-right: 10px
+				margin-top: 8px
+			ol
+				margin: rem(10px 0)
+			ul
+				margin: rem(10px 0)
+				margin-left: rem(30px)
+	img
+		width: auto
+		height: auto
+	code
+		margin: 11px 0
+		line-height: $default-line-height
+		padding: 2px 4px
+		border: 1px solid #dde4e9
+		background-color: #F6F6F6
+		color: #232527
+		display: inline-block
+	pre
+		white-space: pre-wrap
+	blockquote
+		margin: rem(25px 0)
+		position: relative
+		border-left: 2px solid $color-primary
+		padding-left: 30px
+		p
+			font-size: rem(20px)
+			line-height: rem(31px)
+			font-weight: 400
+			&:nth-last-child(1)
+				font-size: rem(16px)
+				font-weight: 300
+		+max-screen($breakpoint-md)
+
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: -20px
+			width: 60px
+			height: 51px
+			//background-image: url(../assets/images/quote.svg)
+			background-repeat: no-repeat
+			background-size: contain
+			background-position: center
+			z-index: -1

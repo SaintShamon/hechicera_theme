@@ -1,0 +1,85 @@
+.explore
+    .main_block
+        padding-top: 100px
+        +max-screen($breakpoint-xxl)
+            padding-top: 0
+    .title_block
+        margin-bottom: 80px
+        +max-screen($breakpoint-xm)
+            margin-bottom: 40px
+        h2
+            text-align: center
+            span
+                font-size: 173px
+                text-transform: uppercase
+                +max-screen($breakpoint-xxl)
+                    font-size: 145px
+                +max-screen(1640px)
+                    font-size: 125px
+                +max-screen($breakpoint-xl)
+                    font-size: 105px
+                +max-screen($breakpoint-xm)
+                    font-size: 85px
+                +max-screen(1200px)
+                    font-size: 64px
+                +max-screen($breakpoint-sm)
+                    font-size: 34px
+    .content-block
+        max-width: 90%
+        margin: 0 auto 150px
+        +max-screen($breakpoint-xxl)
+            margin: 0 auto 100px
+        +max-screen($breakpoint-xm)
+            margin: 0 auto 50px
+        p
+            text-align: center
+
+    .arc-heading
+        svg
+            +max-screen(1640px)
+                width: 400px
+                height: 400px
+            +max-screen($breakpoint-xm)
+                width: 300px
+                height: 300px
+            +max-screen(425px)
+                width: 225px
+                height: 225px
+        // Debug colours: shows text path
+        // path
+        //   stroke lime
+        //   stroke-width 1px
+
+    .arc-heading__heading
+    .arc-heading__subheading
+        font-family: $font-family-title
+        text-transform: uppercase
+        line-height: 1
+
+    .arc-heading__heading
+        fill: $color-primary
+        text-transform: uppercase
+
+    .arc-heading__subheading
+        fill: $color-primary
+        letter-spacing: tracking(50)
+
+    .container_new
+        position: relative
+        padding: 20px
+        margin: 0 auto -300px
+        width: max-content
+        +max-screen($breakpoint-xm)
+            margin: 0 auto -200px
+    .icon
+        position: absolute
+        width: 34px
+        height: 48px
+        top: 50%
+        left: calc( 50% - 17px )
+        +max-screen(1640px)
+            width: 17px
+            height: 24px
+            left: calc( 50% - 8.5px )
+        +max-screen($breakpoint-xm)
+            top: 40%

@@ -1,0 +1,79 @@
+.product
+    &.left_text
+        .text
+            margin-left: 70px
+            margin-right: 50px
+            +max-screen($breakpoint-xl)
+                margin-left: 40px
+            +max-screen($breakpoint-lg)
+                margin-left: auto
+                margin-right: auto
+    &.right_text
+        .text
+            order: 2
+        .image
+            order: 1
+
+    .main_block
+        display: flex
+        justify-content: space-between
+        +max-screen($breakpoint-lg)
+            flex-direction: column
+    .col
+        width: 100%
+    .text
+        height: max-content
+        align-self: center
+        max-width: 552px
+        +max-screen(1640px)
+            max-width: 500px
+        +max-screen(1200px)
+            max-width: 40%
+        +max-screen($breakpoint-lg)
+            order: 2
+            margin: 0 auto
+        +max-screen($breakpoint-md)
+            max-width: 70%
+    .image
+        max-width: 909px
+        +max-screen(1640px)
+            width: 50%
+        +max-screen($breakpoint-xl)
+            width: 45%
+            max-width: 659px
+        +max-screen(1200px)
+            max-width: 50%
+        +max-screen($breakpoint-lg)
+            width: 50%
+            max-width: none
+            margin: 0 auto
+            order: 1
+        +max-screen($breakpoint-md)
+            width: 70%
+    .title_block
+        margin-bottom: 50px
+        +max-screen($breakpoint-lg)
+            margin-bottom: 20px
+            text-align: center
+        h2
+            // display: flex
+        img
+            max-width: 129px
+            display: block
+            +max-screen(1640px)
+                max-width: 79px
+            +max-screen($breakpoint-lg)
+                margin-left: auto
+                margin-right: auto
+    .content-block
+        +max-screen($breakpoint-lg)
+            text-align: center
+        p,li
+            color: $color-grey
+            font-weight: 700
+        a.button
+            margin-top: 110px
+            +max-screen($breakpoint-xxl)
+                margin-top: 60px
+            +max-screen($breakpoint-lg)
+                margin-top: 20px

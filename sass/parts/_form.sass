@@ -1,0 +1,35 @@
+.form_block
+    form
+    .inner_block
+        display: flex
+        width: 100%
+        max-width: 412px
+        +max-screen(700px)
+            flex-direction: column
+    input[type=email]
+        border: 1px solid $color-primary
+        background: none
+        height: 60px
+        width: 282px
+        padding: 0 20px
+        color: $color-primary
+        font-size: 16px
+        +max-screen($breakpoint-xl)
+            height: 40px
+            width: 232px
+            font-size: 12px
+        +max-screen(700px)
+            width: 100%
+            margin-bottom: 5px
+        &::placeholder
+            color: $color-primary
+    input[type=submit]
+        background: $color-primary
+        color: $color-white
+        height: 60px
+        width: 130px
+        +max-screen($breakpoint-xl)
+            height: 40px
+            width: 100px
+        +max-screen(700px)
+            width: 100%

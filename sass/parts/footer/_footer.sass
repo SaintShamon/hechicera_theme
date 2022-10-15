@@ -1,0 +1,148 @@
+.footer
+    &_top_block
+        position: relative
+        border-top: 1px solid $color-primary
+        padding-top: 100px
+        +max-screen($breakpoint-md)
+            display: flex
+            justify-content: space-between
+            padding-top: 50px
+        +max-screen(700px)
+            flex-direction: column
+
+    &_menu_block
+        position: absolute
+        top: 100px
+        left: 0
+        width: 100%
+        max-width: 300px
+        +max-screen($breakpoint-md)
+            position: relative
+            top: auto
+            left: auto
+        +max-screen(700px)
+            margin: 0 auto 30px
+        li
+            font-size: 14px
+            line-height: normal
+            margin-bottom: 10px
+            width: max-content
+            +max-screen(700px)
+                text-align: center
+                // width: 100%
+                margin: 0 auto 10px
+            &:last-of-type
+                margin-bottom: 0
+            &.active
+                border-bottom: 1px solid $color-blue
+                a
+                    color: $color-blue
+        a
+            font-size: 14px
+            font-weight: bold
+            font-family: $font-family-title
+            transition: $default-transition
+            &:hover
+                color: $color-blue
+    &_logo
+        width: 100%
+        max-width: 655px
+        margin: 0 auto
+        +max-screen($breakpoint-xl)
+            max-width: 455px
+        +max-screen(1200px)
+            max-width: 345px
+        +max-screen($breakpoint-md)
+            max-width: 250px
+            margin: 0
+        +max-screen(700px)
+            margin: 0 auto
+    &_bottom_block
+        margin-top: 40px
+        display: flex
+        justify-content: space-between
+        +max-screen(700px)
+            flex-direction: column
+        .col
+            width: 100%
+            max-width: 412px
+            +max-screen(700px)
+                margin: 0 auto 30px
+        .socials_block
+
+            .bottom_menu
+                ul
+                    display: flex
+                    flex-wrap: wrap
+                    +max-screen(700px)
+                        justify-content: center
+            li
+                font-size: 14px
+                line-height: normal
+                margin-right: 20px
+            &:last-of-type
+                margin-right: 0
+            a
+                font-size: 14px
+                font-weight: bold
+                font-family: $font-family-title
+                color: $color-blue
+                transition: $default-transition
+                &:hover
+                    color: $color-primary
+            p
+                font-size: 14px
+                font-weight: bold
+                font-family: $font-family-title
+                +max-screen(700px)
+                    text-align: center
+        .socials_row
+            display: flex
+            flex-wrap: wrap
+            margin: 20px 0
+            +max-screen(700px)
+                justify-content: center
+            li
+                font-size: 30px
+                line-height: normal
+                margin-right: 30px
+                display: flex
+                &:last-of-type
+                    margin-right: 0
+                img
+
+                    width: max-content
+                    max-width: 29px
+                a
+
+                    align-self: center
+        .form_block
+            h3
+                font-size: 28px
+                +max-screen($breakpoint-xl)
+                    font-size: 22px
+                +max-screen($breakpoint-md)
+                    font-size: 14px
+                    margin-bottom: 20px
+                +max-screen(700px)
+                    text-align: center
+            .form_bottom
+                margin-top: 10px
+                p
+                    font-size: 13.5px
+                +max-screen(700px)
+                    text-align: center
+    .copyright_block
+        margin-top: 70px
+        padding-bottom: 90px
+        +max-screen($breakpoint-xl)
+            margin-top: 40px
+            padding-bottom: 40px
+        +max-screen(700px)
+            margin-top: 0
+        p
+            text-align: center
+            font-size: 16px
+            color: $color-blue
+            +max-screen($breakpoint-xl)
+                font-size: 14px

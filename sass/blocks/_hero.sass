@@ -1,0 +1,69 @@
+.hero
+    z-index: 1
+    &_main_block
+        padding-top: 150px
+        padding-bottom: 250px
+        +max-screen($breakpoint-xxl)
+            padding-top: 100px
+        +max-screen(1640px)
+            padding-bottom: 150px
+        +max-screen($breakpoint-xm)
+            padding-top: 100px
+        +max-screen(1200px)
+            padding-bottom: 100px
+            padding-top: 0
+        +max-screen($breakpoint-md)
+            padding: 0
+    &_text_block
+        position: relative
+        width: 100%
+        max-width: 776px
+        z-index: 1
+        +max-screen(1640px)
+            max-width: 700px
+        +max-screen($breakpoint-xm)
+            max-width: 600px
+        +max-screen(1200px)
+            max-width: 500px
+        h1
+            line-height: 85%
+            +max-screen($breakpoint-sm)
+                text-align: center
+            span
+                line-height: 85%
+                font-size: 70px
+                +max-screen(1640px)
+                    font-size: 50px
+                +max-screen($breakpoint-xl)
+                    font-size: 40px
+                +max-screen($breakpoint-xm)
+                    font-size: 37px
+                +max-screen($breakpoint-sm)
+                    font-size: 34px
+                &:first-of-type
+                    margin-left: 50px
+                    +max-screen($breakpoint-sm)
+                        margin-left: 0
+        .content-block
+            max-width: 588px
+            margin-top: 40px
+            +max-screen($breakpoint-sm)
+                text-align: center
+                max-width: 90%
+                margin-left: auto
+                margin-right: auto
+    .img_block
+        position: absolute
+        top: 0
+        right: 0
+        width: 90%
+        +min-screen($breakpoint-xxxl)
+            width: 80%
+        +max-screen($breakpoint-xxl)
+            width: 80%
+        +max-screen(1240px)
+            max-width: 900px
+        +max-screen(1200px)
+            opacity: 0.6
+        +max-screen($breakpoint-md)
+            width: 90%

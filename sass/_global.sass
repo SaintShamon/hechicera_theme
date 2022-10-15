@@ -1,0 +1,128 @@
+*
+	box-sizing: border-box
+
+	&::after,
+	&::before
+		box-sizing: border-box
+
+#app
+	min-height: calc(100vh - 460px)
+	box-sizing: border-box
+	+max-screen(769px)
+		min-height: 0
+#main
+	width: 100%
+	overflow: hidden
+
+.site
+	position: relative
+	overflow: hidden
+img
+	width: 100%
+	height: auto
+.section-bg
+	width: 100vw
+	height: 100%
+	position: absolute
+	top: 0
+	left: 50%
+	margin-left: calc(-1 * (100vw / 2))
+	z-index: -1
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+
+#button_top
+	display: flex
+	background-color: #fff
+	width: 50px
+	height: 50px
+	text-align: center
+	border-radius: 50%
+	border: 1px solid $color-primary
+	position: fixed
+	bottom: 30px
+	right: 30px
+	opacity: 0
+	transition: background-color .3s, opacity .5s, visibility .5s
+	visibility: hidden
+	z-index: 2
+
+	svg
+		align-self: center
+		margin: 0 auto
+
+		transform: rotate(-90deg)
+		path
+			fill: $color-blue
+	&:hover
+		cursor: pointer
+		background-color: #FFF
+		border: 1px solid $color-blue
+		opacity: 1
+		visibility: visible
+		svg
+			path
+				fill: $color-primary
+
+	&:active
+		background-color: #555
+
+	&.show
+		opacity: 1
+		visibility: visible
+
+.overlay
+	content: ""
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, 0.3)
+	opacity: 0
+	transition: .3s
+	z-index: -10
+	.opened-popup &
+		opacity: 1
+		z-index: 99
+.slick-slider
+	.slick-dots
+		bottom: -50px
+		li.slick-active
+			button
+				width: 12px
+				height: 12px
+				background: $color-primary
+		li
+			width: 12px
+			height: 12px
+			margin: 0 5px
+			display: inline-flex
+			button
+				width: 7px
+				height: 7px
+				background: #fff
+				border-radius: 50%
+				border: 1px solid $color-primary
+				&::before
+					display: none
+
+body
+	div.is-ajax-search-details,
+	div.is-ajax-search-result
+		max-width: 250px
+		margin-top: 20px
+		padding: 0
+		background: #fff
+		a
+			font-family: $font-family-title
+			color: $color-blue
+			font-weight: 400
+	.is-ajax-search-no-result
+		font-family: $font-family-title
+		color: $color-blue
+	.is-form-style input.is-search-input
+		font-family: $font-family-title
+		color: $default-text-color
+		background: rgba(255,255,255,.95)

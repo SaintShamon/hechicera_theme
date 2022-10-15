@@ -1,0 +1,33 @@
+.button
+    display: inline-block
+    position: relative
+    z-index: 2
+    appearance: none
+    min-width: 200px
+    border-radius: 0
+    box-sizing: border-box
+    transition: 0.3s
+    background: $color-primary
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 120%
+    padding: 19px 20px
+    text-align: center
+    text-transform: uppercase
+    color: $color-white
+    transition: $default-transition
+    +min-screen($breakpoint-xl)
+        font-size: 18px
+    +max-screen($breakpoint-xl)
+    +max-screen($breakpoint-xm)
+        padding: 15px 20px
+        font-size: 14px
+        min-width: 180px
+    .content-block &
+        color: $color-white
+        font-weight: 700
+    &:hover
+        background: darken($color-blue, 20%)
+        color: $color-white
+        transition: 0.3s left
