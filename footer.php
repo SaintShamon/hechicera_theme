@@ -9,5 +9,10 @@
 	</a> -->
 	<?php wp_footer(); ?>
 	</div>
+
+    <script>
+        new WOW().init();
+    </script>
+
 	</body>
 	</html>

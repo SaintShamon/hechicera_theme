@@ -24,7 +24,7 @@
         <div class="main_block">
             <div class="col text">
                 <?php if($title): ?>
-                <div class="title_block">
+                <div class="title_block wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
                     <h2>
                         <?php echo $title; ?>
                         <?php if($title_img  == true): ?>
@@ -34,17 +34,17 @@
                 </div>
                 <?php endif; ?>
                 <?php if($content): ?>
-                <div class="content-block text--size--30">
+                <div class="content-block text--size--30 wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                     <?php echo $content; ?>
                     <?php if($btn): 
                         $target = $btn['target'] ? $btn['target'] : '_self'; ?>
                     <a href="<?php echo $btn['url']; ?>" target="<?php echo esc_attr( $target ); ?>"
-                        class="button"><?php echo $btn['title']; ?></a>
+                        class="button wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s"><?php echo $btn['title']; ?></a>
                     <?php endif; ?>
                 </div>
                 <?php endif; ?>
             </div>
-            <div class="col image">
+            <div class="col image wow animate__animated animate__jackInTheBox" data-wow-duration="2s" data-wow-delay="0.7s">
                 <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo $image['title']; ?>">
             </div>
         </div>

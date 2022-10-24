@@ -14,25 +14,27 @@
         <div class="container">
             <div class="main_block">
                 <?php if($title): ?>
-                <div class="title_block">
+                <div class="title_block wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
                     <h2><?= $title ?></h2>
                 </div>
                 <?php endif; ?>
                 <?php if($content): ?>
-                <div class="content-block">
+                <div class="content-block wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
                     <?= $content ?>
                 </div>
                 <?php endif; ?>
                 <?php if(have_rows('list_row')): ?>
                 <div class="awards_row">
+                    <?php $i = 0;?>
                     <?php while(have_rows('list_row')): the_row();
                     $img = get_sub_field('image');
                     if($img):
                 ?>
-                    <div class="awards_block">
+                    <div class="awards_block wow animate__animated animate__fadeIn" data-wow-duration="0.5s" data-wow-delay="<?php echo ($i / 10) . 's';?>">
                         <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['title']; ?>">
                     </div>
                     <?php endif; ?>
+                    <?php $i++;?>
                     <?php endwhile; ?>
                 </div>
                 <?php endif; ?>

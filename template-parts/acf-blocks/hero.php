@@ -15,10 +15,10 @@
         <div class="hero_main_block">
             <div class="hero_text_block">
                 <?php if($title): ?>
-                <h1 class="text--size--67"><?php echo $title; ?></h1>
+                <h1 class="text--size--67 wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s"><?php echo $title; ?></h1>
                 <?php endif; ?>
                 <?php if($content): ?>
-                <div class="content-block">
+                <div class="content-block wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                     <?php echo $content; ?>
                 </div>
                 <?php endif; ?>

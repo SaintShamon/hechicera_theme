@@ -12,20 +12,20 @@
     <div class="container">
         <div class="main_block">
             <?php if($title): ?>
-            <div class="title_block">
+            <div class="title_block wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
                 <h2 class="text--size--67">
                     <?php echo $title; ?>
                 </h2>
             </div>
             <?php endif; ?>
             <?php if($content): ?>
-            <div class="content-block">
+            <div class="content-block wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                 <?php echo $content; ?>
             </div>
             <?php endif; ?>
             <?php if($text_in_bottom): ?>
             <div class="container_new">
-                <div class="arc-heading"><svg xmlns="http://www.w3.org/2000/svg"
+                <div class="arc-heading wow animate__animated animate__zoomIn" data-wow-duration="1s" data-wow-delay="0.6s"><svg xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" width="600px" height="600px" viewBox="0 0 300 300">
                         <defs>
                             <path id="heading-arc" d="M 30 150 a 120 120 0 1 1 240 0"></path>

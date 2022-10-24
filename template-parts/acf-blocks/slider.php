@@ -9,7 +9,7 @@
 ?>
 <section class="slider section" id="<?= esc_attr($id) ?>-section">
     <div class="container">
-        <div class="main_block">
+        <div class="main_block wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
             <?php if($title || $subtitle): ?>
             <div class="title_block">
                 <?php if($title): ?>

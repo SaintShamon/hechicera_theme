@@ -13,7 +13,7 @@
     <div class="section-bg bg-parallax" style="background-image: url('<?= $bg_img ?>');"></div>
     <div class="container">
         <div class="main_block">
-            <div class="inner_block">
+            <div class="inner_block wow animate__animated animate__pulse" data-wow-duration="1s" data-wow-delay="0.5s">
                 <?php if($content): ?>
                 <div class="content-block text--size--39">
                     <?= $content ?>
