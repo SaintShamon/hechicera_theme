@@ -10,7 +10,7 @@
     if($title || $bg_img):
 ?>
 <section class="center_text_img section" id="<?= esc_attr($id) ?>-section">
-    <div class="section-bg" style="background-image: url('<?= $bg_img ?>');"></div>
+    <div class="section-bg bg-parallax" style="background-image: url('<?= $bg_img ?>');"></div>
     <div class="container">
         <div class="main_block">
             <div class="inner_block">

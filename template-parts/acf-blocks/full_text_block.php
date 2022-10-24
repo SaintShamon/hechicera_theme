@@ -11,7 +11,7 @@
 ?>
 
 <section class="full_text_block section" id="<?= esc_attr($id) ?>-section">
-    <div class="section-bg"
+    <div class="section-bg bg-parallax"
         style="background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0, 0.4)),url('<?= $bg_img ?>')">
     </div>
     <div class="container">
