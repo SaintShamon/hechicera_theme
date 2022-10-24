@@ -7,6 +7,8 @@
 
 </head>
 
+
+
 <?php $body_classes = ''; ?>
 <?php 
 	if(is_singular('services')):

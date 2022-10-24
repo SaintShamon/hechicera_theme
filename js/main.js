@@ -12,6 +12,7 @@ import {
     header
 } from './template-parts/header/header';
 
+
 import {
     footer
 } from './template-parts/footer/footer';
@@ -23,6 +24,9 @@ import {
 import {
     scrollToAnchor
 } from './animations/scroll-to-anchor';
+
+// import smooth scroll
+import './animations/scrooth';
 
 header();
 footer()
