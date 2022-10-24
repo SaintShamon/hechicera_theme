@@ -1,16 +1,19 @@
 <?php 
-   $title = get_sub_field('title_block');
-   $subtitle = get_sub_field('subtitle_block');
-   $slider_row = get_sub_field('slider_row');
+    $prefix = "slider";
+    // include block settings vars
+    include(get_theme_file_path("/template-parts/block-settings.php"));
+    $title = get_sub_field('title_block');
+    $subtitle = get_sub_field('subtitle_block');
+    $slider_row = get_sub_field('slider_row');
     if($slider_row):
 ?>
-<section class="slider section">
+<section class="slider section" id="<?= esc_attr($id) ?>-section">
     <div class="container">
         <div class="main_block">
             <?php if($title || $subtitle): ?>
             <div class="title_block">
                 <?php if($title): ?>
-                <h2 class="text--size--100"><?= $title ?></h2>
+                <h2 class="text--size--67"><?= $title ?></h2>
                 <?php endif; ?>
                 <?php if($subtitle): ?>
                 <h3 class="subtitle text--size--39"><?= $subtitle ?></h3>

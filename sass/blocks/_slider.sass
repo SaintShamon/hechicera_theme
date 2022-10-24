@@ -1,6 +1,6 @@
 .slider
     .main_block
-        padding: 50px 0 150px
+        padding: 50px 0 50px
         +max-screen($breakpoint-xl)
             padding: 50px 0
         +max-screen(1200px)
@@ -8,16 +8,17 @@
     .title_block
         margin-bottom: 88px
         text-align: center
+        +max-screen($breakpoint-xl)
+            margin-bottom: 48px
         +max-screen(1200px)
             margin-bottom: 30px
     &_block
         img
-            width: 535px
-            height: 535px
             object-fit: cover
-            +max-screen(1640px)
-                width: 435px
-                height: 435px
+            width: 435px
+            height: 435px
+            +min-screen($breakpoint-xxxl)
+                width: 100%
             +max-screen($breakpoint-xl)
                 width: 335px
                 height: 335px
@@ -34,11 +35,12 @@
                 width: 275px
                 height: 275px
         .title
-            margin: 80px 0
+            margin: 30px 0
             +max-screen(1640px)
-                margin: 50px 0
-            +max-screen($breakpoint-xm)
                 margin: 30px 0
+            +max-screen($breakpoint-xl)
+                margin: 30px 0
+
             span
                 text-align: center
                 width: 100%
@@ -48,13 +50,14 @@
             margin: 0 auto
             display: block
             max-width: 200px
-            +max-screen($breakpoint-xm)
-                max-width: 180px
+            +max-screen($breakpoint-xl)
+                max-width: 170px
     .slick-slide
-        margin: 0 40px 0 0
-        width: 535px
-        +max-screen(1640px)
-            width: 435px
+        margin: 0 10px 0 0
+        width: 435px
+        +min-screen($breakpoint-xxxl)
+            margin: 0 10px 0 0
+            width: 500px
         +max-screen($breakpoint-xl)
             width: 335px
         +max-screen($breakpoint-xm)
@@ -64,10 +67,11 @@
             margin: 0
     /* the parent */
     .slick-list
-        margin: 0 -180px 0 0
-        // overflow: visible
+        margin: 0 -120px 0 0
+        overflow: visible
         +min-screen($breakpoint-xxxl)
-            margin: 0 -80px 0 0
+            margin: 0 20px 0 0
+            overflow: hidden
         +max-screen($breakpoint-xm)
             margin: 0 -30px 0 0
             overflow: visible
@@ -75,6 +79,7 @@
             overflow: hidden
             margin: 0
     .slick-list
-        padding-left: 0px!important // half partial
+        +max-screen($breakpoint-xxxl)
+            padding-left: 0px!important // half partial
         +max-screen($breakpoint-lg)
             padding: 0!important

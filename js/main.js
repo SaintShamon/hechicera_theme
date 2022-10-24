@@ -17,12 +17,12 @@ import {
 } from './template-parts/footer/footer';
 
 import {
-    scrollToAnchor
-} from './animations/scroll-to-anchor';
-
-import {
     mainslider
 } from './template-parts/blocks/slider';
+
+import {
+    scrollToAnchor
+} from './animations/scroll-to-anchor';
 
 header();
 footer()

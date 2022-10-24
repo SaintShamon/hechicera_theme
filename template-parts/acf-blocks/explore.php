@@ -1,15 +1,19 @@
-<?php 
+<?php
+    $prefix = "explore";
+    // include block settings vars
+    include(get_theme_file_path("/template-parts/block-settings.php"));
+
     $title = get_sub_field('title_block');
     $content = get_sub_field('content');
     $text_in_bottom = get_sub_field('text_in_bottom');
     if($title || $text_in_bottom):
 ?>
-<section class="explore section">
+<section class="explore section" id="<?= esc_attr($id) ?>-section">
     <div class="container">
         <div class="main_block">
             <?php if($title): ?>
             <div class="title_block">
-                <h2 class="text--size--145">
+                <h2 class="text--size--67">
                     <?php echo $title; ?>
                 </h2>
             </div>
@@ -29,7 +33,7 @@
                         </defs>
                         <use xlink:href="#heading-arc" fill="none"></use>
                         <use xlink:href="#subheading-arc" fill="none"></use><text
-                            class="arc-heading__heading text--size--37" fill="#fff" text-anchor="middle">
+                            class="arc-heading__heading text--size--30" fill="#fff" text-anchor="middle">
                             <textPath startOffset="50%" xlink:href="#heading-arc"><?= $text_in_bottom  ?>
                             </textPath>
                             <!-- Inner circles-->

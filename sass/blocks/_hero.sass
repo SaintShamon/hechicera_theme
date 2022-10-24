@@ -7,7 +7,7 @@
             padding-top: 100px
         +max-screen(1640px)
             padding-bottom: 150px
-        +max-screen($breakpoint-xm)
+        +max-screen($breakpoint-xl)
             padding-top: 100px
         +max-screen(1200px)
             padding-bottom: 100px
@@ -31,7 +31,7 @@
                 text-align: center
             span
                 line-height: 85%
-                font-size: 70px
+                font-size: 55px
                 +max-screen(1640px)
                     font-size: 50px
                 +max-screen($breakpoint-xl)
@@ -56,14 +56,18 @@
         position: absolute
         top: 0
         right: 0
-        width: 90%
+        width: 75%
         +min-screen($breakpoint-xxxl)
             width: 80%
         +max-screen($breakpoint-xxl)
             width: 80%
+        +max-screen($breakpoint-xl)
+            width: 75%
         +max-screen(1240px)
+            width: 80%
             max-width: 900px
         +max-screen(1200px)
-            opacity: 0.6
+            opacity: 0.9
+            width: 90%
         +max-screen($breakpoint-md)
             width: 90%

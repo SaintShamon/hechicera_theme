@@ -27,18 +27,18 @@ h1, .h1
 	+max-screen(360px)
 		font-size: 40px
 h2, .h2
-	font-size: 78px
+	font-size: 58px
 	line-height: 110%
 	font-family: $font-family-title
 	font-weight: 700
 	+max-screen(1640px)
 		font-size: 58px
-	+max-screen($breakpoint-xm)
+	+max-screen($breakpoint-xl)
 		font-size: 44px
 	+max-screen(1200px)
-		font-size: 36px
+		font-size: 32px
 	+max-screen($breakpoint-sm)
-		font-size: 28px
+		font-size: 26px
 	+max-screen(360px)
 		font-size: 22px
 h3, .h3
@@ -46,6 +46,8 @@ h3, .h3
 	font-size: 49px
 	line-height: 120%
 	font-family: $font-family-title
+	+max-screen($breakpoint-xl)
+		font-size: 36px
 	+max-screen(1200px)
 		font-size: 18px
 h4, .h4
@@ -64,13 +66,13 @@ h6, .h6
 	font-size: 16px
 	line-height: 112%
 
-p,.p
-	font-size: $default-font-size
-	line-height: $default-line-height
-	+max-screen(1510px)
-		font-size: $default-font-size-min
-	+max-screen(1200px)
-		font-size: $default-font-size-mob
+// p,.p
+// 	font-size: $default-font-size
+// 	line-height: $default-line-height
+// 	+max-screen(1510px)
+// 		font-size: $default-font-size-min
+// 	+max-screen(1200px)
+// 		font-size: $default-font-size-mob
 .text
 	&--style
 	&--size--10,&--size--10 *
@@ -116,19 +118,23 @@ p,.p
 		font-size: 29px
 		+max-screen($breakpoint-xl)
 			font-size: 24px
+		+max-screen($breakpoint-xm)
+			font-size: 20px
 		+max-screen(1200px)
-			font-size: 18px
+			font-size: 16px
 	&--size--30,&--size--30 *
 		font-size: 30px
 		+max-screen(1640px)
 			font-size: 24px
-		+max-screen(1200px)
+		+max-screen($breakpoint-xl)
 			font-size: 20px
+		+max-screen(1200px)
+			font-size: 18px
 	&--size--37,&--size--37 *
 		font-size: 37px
 		+max-screen($breakpoint-xxl)
 			font-size: 32px
-		+max-screen($breakpoint-xm)
+		+max-screen($breakpoint-xl)
 			font-size: 28px
 		+max-screen(1200px)
 			font-size: 20px
@@ -136,29 +142,29 @@ p,.p
 		font-size: 39px
 		+max-screen($breakpoint-xxl)
 			font-size: 34px
-		+max-screen($breakpoint-xm)
+		+max-screen($breakpoint-xl)
 			font-size: 30px
 		+max-screen(1200px)
 			font-size: 20px
 	&--size--49,&--size--49 *
 		font-size: 49px
-		+max-screen($breakpoint-xl)
+		+max-screen($breakpoint-xxl)
 			font-size: 40px
-		+max-screen($breakpoint-xm)
-			font-size: 34px
+		+max-screen($breakpoint-xl)
+			font-size: 30px
 		+max-screen($breakpoint-sm)
 			font-size: 20px
 	&--size--52,&--size--52 *
 		font-size: 52px
 		+max-screen(1640px)
 			font-size: 32px
-		+max-screen($breakpoint-xm)
+		+max-screen($breakpoint-xl)
 			font-size: 22px
 	&--size--59,&--size--59 *
 		font-size: 59px
 		+max-screen(1640px)
 			font-size: 39px
-		+max-screen($breakpoint-xm)
+		+max-screen($breakpoint-xl)
 			font-size: 29px
 		+max-screen($breakpoint-md)
 			font-size: 20px
@@ -166,7 +172,7 @@ p,.p
 		font-size: 75px
 		+max-screen(1640px)
 			font-size: 59px
-		+max-screen($breakpoint-xm)
+		+max-screen($breakpoint-xl)
 			font-size: 35px
 		+max-screen($breakpoint-sm)
 			font-size: 24px
@@ -175,17 +181,17 @@ p,.p
 		+max-screen(1640px)
 			font-size: 80px
 		+max-screen($breakpoint-xl)
-			font-size: 50px
+			font-size: 40px
 		+max-screen($breakpoint-sm)
 			font-size: 30px
-	&--size--117,&--size--117 *
-		font-size: 117px
+	&--size--67,&--size--67 *
+		font-size: 67px
 		+max-screen(1640px)
-			font-size: 100px
+			font-size: 65px
 		+max-screen($breakpoint-xl)
-			font-size: 80px
-		+max-screen($breakpoint-xm)
-			font-size: 74px
+			font-size: 60px
+		+max-screen(1200px)
+			font-size: 44px
 		+max-screen($breakpoint-sm)
 			font-size: 34px
 	&--size--145,&--size--145 *
@@ -195,11 +201,11 @@ p,.p
 		+max-screen(1640px)
 			font-size: 90px
 		+max-screen($breakpoint-xl)
-			font-size: 80px
-		+max-screen($breakpoint-xm)
 			font-size: 70px
+		+max-screen($breakpoint-xm)
+			font-size: 60px
 		+max-screen(1200px)
-			font-size: 50px
+			font-size: 40px
 		+max-screen($breakpoint-sm)
 			font-size: 34px
 	&--size--147,&--size--147 *
@@ -207,9 +213,7 @@ p,.p
 		+max-screen($breakpoint-xxl)
 			font-size: 117px
 		+max-screen($breakpoint-xl)
-			font-size: 77px
-		+max-screen($breakpoint-xm)
-			font-size: 67px
+			font-size: 57px
 		+max-screen(1200px)
 			font-size: 50px
 		+max-screen($breakpoint-sm)
@@ -244,8 +248,6 @@ p,.p
 			font-weight: 800
 		&--black
 			font-weight: 900
-
-.title
 
 .link--underline
 	position: relative

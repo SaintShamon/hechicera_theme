@@ -22,6 +22,11 @@ function theme_setup(){
 			'bottom-menu' => __( 'Footer Menu', 'hechicera'),
 		)
     );
+
+	if (function_exists('add_image_size')) {
+		add_image_size( 'bottle_img', 987, 938,);
+
+	}
     
 }
 

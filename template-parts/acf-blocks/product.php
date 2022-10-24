@@ -1,14 +1,25 @@
 <?php 
+
+    $prefix = "product";
+    
+    // include block settings vars
+    include(get_theme_file_path("/template-parts/block-settings.php"));
+
     $choose_side = get_sub_field('choose_side');
     $title_img = get_sub_field('add_image');
-    $title_image = get_sub_field('title_image');
+    $title_image = get_sub_field('title_img');
     $title = get_sub_field('title_block');
     $content = get_sub_field('content');
     $image = get_sub_field('image');
     $btn = get_sub_field('button');
+    // Thumbnail size attributes.
+    $size = 'bottle_img';
+    $thumb = $image['sizes'][ $size ];
+    $width = $image['sizes'][ $size . '-width' ];
+    $height = $image['sizes'][ $size . '-height' ];
     if($title || $choose_side):
 ?>
-<section class="product <?php echo $choose_side; ?> section">
+<section class="product <?php echo $choose_side; ?> section" id="<?= esc_attr($id) ?>-section">
     <div class="container">
         <div class="main_block">
             <div class="col text">
@@ -34,7 +45,7 @@
                 <?php endif; ?>
             </div>
             <div class="col image">
-                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
+                <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo $image['title']; ?>">
             </div>
         </div>
     </div>

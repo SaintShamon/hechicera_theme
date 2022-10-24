@@ -1,37 +1,69 @@
 .center_text_img
-    .section-bg
-        // background-image: url('../assets/images/blue_bg_2.jpg')
+    margin-top: 100px
+    +max-screen($breakpoint-xl)
+        margin-top: 50px
     .main_block
         max-width: 1000px
         margin: 0 auto
         display: flex
         width: 100%
-        +max-screen($breakpoint-xm)
+        +max-screen($breakpoint-xl)
             max-width: 60%
         +max-screen($breakpoint-sm)
             max-width: 100%
 
     .inner_block
-        margin: 350px 0
-        padding: 30px
+        position: relative
+        margin: 200px 0
+        padding: 60px 30px 48px
         background-image: url('../assets/images/white_bg.svg')
-        background-size: contain
-        background-position: center
+        background-size: cover
+        background-position: top
         background-repeat: no-repeat
+        &::after
+            position: absolute
+            content: ''
+            width: 100%
+            height: 12px
+            left: 0
+            bottom: -12px
+            background-image: url('../assets/images/white_bg.svg')
+            background-size: cover
+            background-position: bottom
+            background-repeat: no-repeat
         +max-screen(1640px)
             background-size: 100%
-        +max-screen($breakpoint-xxl)
-            margin: 250px 0
-        +max-screen(1640px)
-            margin: 200px 0
-        +max-screen($breakpoint-xm)
-            margin: 150px 0
+        +max-screen($breakpoint-xl)
+            margin: 120px 0
         +max-screen(1200px)
             margin: 50px 0
+            padding: 30px
         +max-screen($breakpoint-lg)
             background-size: cover
+            background-position: center
+            padding: 20px 30px
+            // background-color: $color-white
+            &::after
+                height: 60%
+                left: -0.5%
+                width: 101%
+            &::before
+                position: absolute
+                content: ''
+                width: 101%
+                height: 60%
+                left: -0.5%
+                top: -12px
+                background-image: url('../assets/images/white_bg.svg')
+                background-size: cover
+                background-position: top
+                background-repeat: no-repeat
     .content-block
         margin-bottom: 30px
         text-align: center
+        position: relative
+        z-index: 1
     .title_block
         text-align: center
+        position: relative
+        z-index: 1

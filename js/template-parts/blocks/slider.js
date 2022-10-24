@@ -8,7 +8,11 @@ function mainslider() {
             dots: false,
             arrows: false,
             slidesToShow: 3,
+            slidesToScroll: 1,
             infinite: true,
+            autoplay: true,
+            speed: 600,
+            autoplaySpeed: 3000,
             cssEase: 'linear',
             variableWidth: true,
             responsive: [{

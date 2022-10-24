@@ -5,33 +5,39 @@
     width: 100%
     z-index: 3
     background: rgba(255, 255, 249,0.7)
+    &.fixed_header
+        position: fixed
+        background: rgba(255,255,249,1)
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1)
+    .container
+        +max-screen(1200px)
+            max-width: 100%
     &_main_block
         display: flex
         justify-content: space-between
         position: relative
-        height: 160px
-        +max-screen($breakpoint-xxl)
-            height: 120px
-        +max-screen(1200px)
+        height: 120px
+        +max-screen($breakpoint-xl)
             height: 100px
+        +max-screen($breakpoint-sm)
+            height: 60px
+
     &__logo
         width: 100%
-        max-width: 193px
         align-self: center
-        +max-screen($breakpoint-xxl)
-            max-width: 140px
-        +max-screen(1200px)
+        max-width: 140px
+        +max-screen($breakpoint-xl)
             max-width: 100px
+        +max-screen($breakpoint-sm)
+            max-width: 60px
     &__menu
         align-self: center
         ul
             display: flex
         li
-            font-size: 14px
             position: relative
             margin-right: 40px
-            +max-screen($breakpoint-xm)
-                font-size: 12px
+            +max-screen($breakpoint-xl)
                 margin-right: 30px
             &:last-of-type
                 margin-right: 0
@@ -43,39 +49,43 @@
                 top: calc( 50% - 17.5px )
                 right: -19px
                 background-color: #1D2D51
-                +max-screen($breakpoint-xm)
+                +max-screen($breakpoint-xl)
                     height: 30px
-                    top: calc( 50% - 15px )
+                    top: calc( 50% - 12px )
                     right: -16px
-            &.active
+            &.current-menu-item
                 border-bottom: 1px solid $color-blue
                 a
                     color: $color-blue
+                    &:hover
+                        border: none
         a
             font-size: 14px
             font-weight: bold
             font-family: $font-family-title
             transition: $default-transition
-            +max-screen($breakpoint-xm)
+            +max-screen($breakpoint-xl)
                 font-size: 12px
             &:hover
                 color: $color-blue
+                border-bottom: 1px solid $color-blue
     &_inner_block
         display: flex
         align-self: center
+        margin-right: -50px
         +max-screen(1200px)
             display: none
     &__search
         display: flex
         align-self: center
         margin-left: 40px
-        +max-screen($breakpoint-xm)
+        +max-screen($breakpoint-xl)
             margin-left: 30px
-
         button
             align-self: center
             background: none
             border: none
+            margin-top: 10px
             &.off
                 display: none
             &:hover
@@ -87,7 +97,7 @@
         svg
             width: 22px
             height: 22px
-            +max-screen($breakpoint-xm)
+            +max-screen($breakpoint-xl)
                 width: 18px
                 height: 18px
         &_block

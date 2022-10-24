@@ -3,19 +3,16 @@
 	padding-left: 30px
 	padding-right: 30px
 	width: 100%
+	max-width: 90%
 	margin: 0 auto
-	+min-screen($breakpoint-xxl)
-		max-width: 1660px
+	+min-screen($breakpoint-xxxl)
+		max-width: 1600px
 	+max-screen(1640px)
 		max-width: 90%
 	+max-screen(1500px)
-		max-width: 1360px
-		padding-left: 0
-		padding-right: 0
-	+max-screen($breakpoint-xm)
 		max-width: 90%
-		padding-left: 30px
-		padding-right: 30px
+	+max-screen($breakpoint-xm)
+		max-width: 85%
 	+max-screen($breakpoint-lg)
 
 	+max-screen($breakpoint-md)

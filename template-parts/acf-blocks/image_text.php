@@ -1,11 +1,15 @@
 <?php 
+    $prefix = "image_text";
+    // include block settings vars
+    include(get_theme_file_path("/template-parts/block-settings.php"));
+
     $title = get_sub_field('title_block');
     $content = get_sub_field('content');
     $image = get_sub_field('image');
     $text_in_bottom = get_sub_field('text_in_bottom');
     if($title || $image):
 ?>
-<section class="image_text section">
+<section class="image_text section" id="<?= esc_attr($id) ?>-section">
     <div class="container">
         <div class="main_block">
             <div class="col image">
@@ -16,7 +20,7 @@
             <div class="col text">
                 <?php if($title): ?>
                 <div class="title_block">
-                    <h2 class="text--size--75"><?= $title ?>
+                    <h2 class="text--size--67"><?= $title ?>
                     </h2>
                 </div>
                 <?php endif; ?>
