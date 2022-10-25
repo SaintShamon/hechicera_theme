@@ -34,7 +34,9 @@
                     if($img):
                 ?>
                 <div class="slider_block">
-                    <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo $img['title']; ?>">
+                    <div class="slider_block__image">
+                        <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo $img['title']; ?>">
+                    </div>
                     <div class="title">
                         <span><?= $title ?></span>
                     </div>
