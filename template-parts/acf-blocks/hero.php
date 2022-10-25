@@ -6,8 +6,8 @@
 
     $title = get_sub_field('title_block');
     $content = get_sub_field('content');
-    $image = get_sub_field('image');
-    if($title || $image):
+    $images = get_sub_field('image_layers');
+    if($title || $images):
 ?>
 <section class="hero section" id="<?= esc_attr($id) ?>-section">
     <div class="section-bg"></div>
@@ -26,7 +26,11 @@
         </div>
     </div>
     <div class="img_block">
-        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
+        <?php if ($images): ?>
+            <?php foreach($images as $idx => $img): ?>
+                <img class="<?php echo 'layer-' . ($idx + 1) ;?>" src="<?php echo $img; ?>" alt="<?php echo 'layer-' . ($idx + 1);?>">
+            <?php endforeach ;?>
+        <?php endif;?>
     </div>
 </section>
 <?php endif; ?>

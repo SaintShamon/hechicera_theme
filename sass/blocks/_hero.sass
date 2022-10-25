@@ -57,6 +57,24 @@
         top: 0
         right: 0
         width: 75%
+        height: 100%
+        img
+            height: auto
+        .layer-
+            &1, &2, &3, &4
+                position: absolute
+                top: -80%
+                right: -25%
+            &1
+                z-index: 20
+            &2
+                z-index: 15
+            &3
+                z-index: 10
+            &4
+                z-index: 5
+
+
         +min-screen($breakpoint-xxxl)
             width: 80%
         +max-screen($breakpoint-xxl)
