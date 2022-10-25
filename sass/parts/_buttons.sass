@@ -18,6 +18,8 @@
     color: $color-white
     transition: $default-transition
     font-family: $font-family-title
+    transition: transform 0.2s ease-in , background 0.2s ease-in
+    will-change: transform , background
     +max-screen($breakpoint-xl)
         padding: 14px 20px
         font-size: 14px
@@ -33,4 +35,4 @@
     &:hover
         background: darken($color-blue, 20%)
         color: $color-white
-        transition: 0.3s left
+        transform: scale(1.05)

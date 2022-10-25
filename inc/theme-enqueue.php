@@ -26,7 +26,6 @@ function theme_scripts() {
     //main.js
 
     wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/main.min.js');
-    wp_enqueue_script( 'wow', 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js', array(), '1.1.2', true);
 
 
     wp_localize_script( 'main', 'customjs_ajax_object',

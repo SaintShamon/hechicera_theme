@@ -103,5 +103,48 @@
                 margin-top: 40px
             +max-screen($breakpoint-xl)
                 margin-top: 20px
+
+    .butterfly-animation
+        position: absolute
+        top: 20%
+        left: 65%
+        display: inline-block
+        width: 120px
+        img
+            width: 100%
+            height: auto
+    .dragonfly-animation
+        position: absolute
+        top: 25%
+        left: 50%
+        display: inline-block
+        width: 120px
+        img
+            width: 100%
+    .bees-animation
+        position: absolute
+        top: 0
+        left: 50%
+        display: inline-block
+        width: 250px
+        height: 250px
+        img
+            position: absolute
+            width: 100%
+            height: auto
+            &:nth-child(1)
+                width: 50px
+                top: 0
+                left: 40%
+            &:nth-child(2)
+                width: 30px
+                top: 50%
+                right: 0
+            &:nth-child(3)
+                width: 40px
+                bottom: 0
+                left: 0
+                
+    
 .product + .product
     padding-top: 0

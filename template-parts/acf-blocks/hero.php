@@ -15,10 +15,10 @@
         <div class="hero_main_block">
             <div class="hero_text_block">
                 <?php if($title): ?>
-                <h1 class="text--size--67 wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s"><?php echo $title; ?></h1>
+                <h1 class="text--size--67 title-appear-hero"><?php echo $title; ?></h1>
                 <?php endif; ?>
                 <?php if($content): ?>
-                <div class="content-block wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="content-block text-appear">
                     <?php echo $content; ?>
                 </div>
                 <?php endif; ?>
@@ -32,5 +32,6 @@
             <?php endforeach ;?>
         <?php endif;?>
     </div>
+    <span class="fly-animation"><img src="<?php echo get_template_directory_uri(); ?>/assets/animations/bird.png" alt="Bird"></span>
 </section>
 <?php endif; ?>

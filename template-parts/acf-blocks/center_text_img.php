@@ -10,10 +10,10 @@
     if($title || $bg_img):
 ?>
 <section class="center_text_img section" id="<?= esc_attr($id) ?>-section">
-    <div class="section-bg bg-parallax" style="background-image: url('<?= $bg_img ?>');"></div>
+    <img class="section-bg bg-parallax" src="<?= $bg_img ?>"/>
     <div class="container">
         <div class="main_block">
-            <div class="inner_block wow animate__animated animate__pulse" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="inner_block">
                 <?php if($content): ?>
                 <div class="content-block text--size--39">
                     <?= $content ?>

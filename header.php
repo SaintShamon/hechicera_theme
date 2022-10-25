@@ -23,6 +23,4 @@ endif;
         get_template_part('template-parts/header/header'); ?>
 
 
-        <main id="main" class="<?php if (is_singular('services')) {
-            echo 'service-template';
-        } ?>">
+        <main id="main">

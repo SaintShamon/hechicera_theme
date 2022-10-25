@@ -1,8 +1,4 @@
 .awards
-    background-image: url('../assets/images/gold_bg.svg')
-    background-position: center
-    background-size: cover
-    background-repeat: no-repeat
     &.section
         padding: 40px
         +max-screen($breakpoint-xl)
@@ -11,10 +7,28 @@
             padding: 20px
         +max-screen($breakpoint-sm)
             padding: 10px
-    .section_bg
-        background-position: 50%
+    &-border
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 1
+        background-image: url('../assets/images/gold_bg.svg')
+        background-position: center
         background-size: cover
         background-repeat: no-repeat
+    &-bg
+        position: absolute
+        top: 35px
+        left: 35px
+        overflow: hidden
+        width: calc(100% - 70px)
+        height: calc(100% - 70px)
+        z-index: 1
+    .container
+        z-index: 3
+        
     .main_block
         padding: 50px 0 100px
         +max-screen($breakpoint-xxl)

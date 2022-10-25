@@ -4,9 +4,6 @@ import {
     lazy
 } from './lazy';
 
-import {
-    lottie
-} from './lottie';
 
 import {
     header
@@ -21,16 +18,15 @@ import {
     mainslider
 } from './template-parts/blocks/slider';
 
-import {
-    scrollToAnchor
-} from './animations/scroll-to-anchor';
+
+
+
 
 // import smooth scroll
-import './animations/scrooth';
+import './animations/animations';
 
 header();
 footer()
-lazy();
-lottie();
+//lazy();
 mainslider();
-scrollToAnchor();
+//scrollToAnchor();

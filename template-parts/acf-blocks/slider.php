@@ -9,14 +9,14 @@
 ?>
 <section class="slider section" id="<?= esc_attr($id) ?>-section">
     <div class="container">
-        <div class="main_block wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div class="main_block">
             <?php if($title || $subtitle): ?>
             <div class="title_block">
                 <?php if($title): ?>
-                <h2 class="text--size--67"><?= $title ?></h2>
+                <h2 class="text--size--67 title-appear"><?= $title ?></h2>
                 <?php endif; ?>
                 <?php if($subtitle): ?>
-                <h3 class="subtitle text--size--39"><?= $subtitle ?></h3>
+                <h3 class="subtitle text--size--39 title-appear"><?= $subtitle ?></h3>
                 <?php endif; ?>
             </div>
             <?php endif; ?>

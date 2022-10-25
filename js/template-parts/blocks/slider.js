@@ -9,10 +9,10 @@ function mainslider() {
             arrows: false,
             slidesToShow: 3,
             slidesToScroll: 1,
-            infinite: true,
-            autoplay: true,
+            infinite: false,
+            autoplay: false,
             speed: 600,
-            autoplaySpeed: 3000,
+            //autoplaySpeed: 3000,
             cssEase: 'linear',
             variableWidth: true,
             responsive: [{

@@ -1,5 +1,7 @@
 .hero
     z-index: 1
+    &.section
+        overflow: visible
     &_main_block
         padding-top: 150px
         padding-bottom: 250px
@@ -26,11 +28,18 @@
         +max-screen(1200px)
             max-width: 500px
         h1
-            line-height: 85%
             +max-screen($breakpoint-sm)
                 text-align: center
-            span
-                line-height: 85%
+            &:not(.splitted)
+                line-height: 0.75em
+                opacity: 0
+            &.splitted
+                line-height: 1.05em
+                .split-line
+                    margin-top: -0.3em
+                    overflow: hidden
+            .small, .small *
+                line-height: 1.05em
                 font-size: 55px
                 +max-screen(1640px)
                     font-size: 50px
@@ -40,10 +49,10 @@
                     font-size: 37px
                 +max-screen($breakpoint-sm)
                     font-size: 34px
-                &:first-of-type
-                    margin-left: 50px
-                    +max-screen($breakpoint-sm)
-                        margin-left: 0
+            .split-line:first-of-type .small:first-of-type , &:not(.splitted) .small:first-of-type
+                margin-left: 50px
+                +max-screen($breakpoint-sm)
+                    margin-left: 0
         .content-block
             max-width: 588px
             margin-top: 40px
@@ -89,3 +98,12 @@
             width: 90%
         +max-screen($breakpoint-md)
             width: 90%
+    .fly-animation
+        position: absolute
+        bottom: 0
+        left: 20%
+        display: inline-block
+        width: 120px
+        img
+            width: 100%
+            height: auto

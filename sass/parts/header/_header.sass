@@ -1,10 +1,11 @@
 .header
-    position: absolute
+    position: fixed
     top: 0
     left: 0
     width: 100%
     z-index: 100
     background: rgba(255, 255, 249,0.7)
+    transition: 0.3s ease-out
     &.fixed_header
         position: fixed
         background: rgba(255,255,249,1)
@@ -64,11 +65,13 @@
             font-weight: bold
             font-family: $font-family-title
             transition: $default-transition
+            display: inline-block
             +max-screen($breakpoint-xl)
                 font-size: 12px
             &:hover
                 color: $color-blue
                 border-bottom: 1px solid $color-blue
+                transform: scale(0.96)
     &_inner_block
         display: flex
         align-self: center
