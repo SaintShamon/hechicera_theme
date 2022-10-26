@@ -1,4 +1,7 @@
 .product
+    &.section
+        +max-screen($breakpoint-sm)
+            overflow: visible
     &.left_text
         .text
             margin-left: 70px
@@ -125,6 +128,7 @@
         width: 120px
         +max-screen($breakpoint-sm)
             width: 80px
+            z-index: 2
         img
             width: 100%
     .bees-animation
