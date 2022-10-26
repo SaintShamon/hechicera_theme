@@ -16,9 +16,13 @@
 	+max-screen($breakpoint-lg)
 
 	+max-screen($breakpoint-md)
+		max-width: 90%
 		padding-left: 10px
 		padding-right: 10px
-	+max-screen(330px)
+	+max-screen($breakpoint-sm)
+		// max-width: 100%
+	+max-screen(430px)
+		max-width: 100%
 		padding-left: 10px
 		padding-right: 10px
 	&--full
@@ -80,8 +84,8 @@
 			padding-top: 170px
 		+max-screen($breakpoint-lg)
 			padding-top: 130px
-		// +max-screen($breakpoint-sm)
-		// 	padding-top: 86px
+		+max-screen($breakpoint-sm)
+			padding-top: 86px
 	&:last-of-type
 		padding-bottom: 0
 

@@ -31,14 +31,19 @@
         +max-screen(1200px)
             max-width: 500px
         +max-screen(720px)
-            max-width: 90%
-            margin-left: auto
+            max-width: 60%
+            // margin-left: auto
             margin-right: auto
-        +max-screen($breakpoint-sm)
-            max-width: none
+        +max-screen(620px)
+            max-width: 100%
+            margin-left: 0
+        +max-screen(400px)
+            max-width: 100%
         h1
             +max-screen(720px)
-                text-align: center
+                text-align: left
+            +max-screen($breakpoint-sm)
+                max-width: 70%
             &:not(.splitted)
                 line-height: 0.75em
                 opacity: 0
@@ -68,12 +73,20 @@
             +max-screen(1200px)
                 max-width: 80%
             +max-screen($breakpoint-lg)
-                max-width: 70%
+                // max-width: 70%
             +max-screen($breakpoint-md)
                 max-width: 50%
             +max-screen(720px)
-                text-align: center
+                text-align: left
                 max-width: none
+                margin-top: 80px
+            +max-screen($breakpoint-sm)
+                max-width: 60%
+                margin-top: 40px
+            +max-screen(485px)
+                max-width: 100%
+                margin-top: 80px
+                text-align: center
     .img_block
         position: absolute
         top: 0
@@ -98,10 +111,11 @@
                     top: -50%
                 +max-screen($breakpoint-sm)
                     right: -50%
-                    top: -45%
+                    top: -35%
                     z-index: -1
-                +max-screen(375px)
-                    top: -15%
+                +max-screen(400px)
+                    top: -33%
+                    right: -40%
             &2
                 z-index: 15
             &3
@@ -127,9 +141,9 @@
             width: 80%
         +max-screen(720px)
             opacity: 0.85
+            // width: 90%
+        +max-screen(400px)
             width: 80%
-        +max-screen($breakpoint-sm)
-
     .fly-animation
         position: absolute
         bottom: 0
