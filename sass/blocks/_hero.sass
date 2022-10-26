@@ -44,6 +44,7 @@
                 text-align: left
             +max-screen($breakpoint-sm)
                 max-width: 70%
+                margin-top: 40px
             &:not(.splitted)
                 line-height: 0.75em
                 opacity: 0
@@ -85,8 +86,8 @@
                 margin-top: 40px
             +max-screen(485px)
                 max-width: 100%
-                margin-top: 80px
-                text-align: center
+                margin-top: 40px
+                text-align: left
     .img_block
         position: absolute
         top: 0
@@ -113,9 +114,11 @@
                     right: -50%
                     top: -35%
                     z-index: -1
+                +max-screen(450px)
+                    right: -40%
                 +max-screen(400px)
                     top: -33%
-                    right: -40%
+                    right: -33%
             &2
                 z-index: 15
             &3
