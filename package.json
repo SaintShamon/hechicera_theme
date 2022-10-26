@@ -28,7 +28,7 @@
     "node-sass": "^4.12.0",
     "webpack": "^5.27.1",
     "webpack-cli": "^4.5.0",
-    "webpack-stream": "^6.1.1"
+    "webpack-stream": "^6.1.2"
   },
   "dependencies": {
     "-": "0.0.1",

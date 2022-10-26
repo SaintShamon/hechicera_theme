@@ -12,10 +12,13 @@
         +max-screen($breakpoint-xl)
             padding-top: 100px
         +max-screen(1200px)
-            padding-bottom: 100px
+            padding-bottom: 200px
             padding-top: 0
         +max-screen($breakpoint-md)
-            padding: 0
+            // padding: 0
+            padding-bottom: 100px
+        +max-screen($breakpoint-sm)
+            padding-bottom: 50px
     &_text_block
         position: relative
         width: 100%
@@ -27,8 +30,14 @@
             max-width: 600px
         +max-screen(1200px)
             max-width: 500px
+        +max-screen(720px)
+            max-width: 90%
+            margin-left: auto
+            margin-right: auto
+        +max-screen($breakpoint-sm)
+            max-width: none
         h1
-            +max-screen($breakpoint-sm)
+            +max-screen(720px)
                 text-align: center
             &:not(.splitted)
                 line-height: 0.75em
@@ -51,16 +60,20 @@
                     font-size: 34px
             .split-line:first-of-type .small:first-of-type , &:not(.splitted) .small:first-of-type
                 margin-left: 50px
-                +max-screen($breakpoint-sm)
+                +max-screen(720px)
                     margin-left: 0
         .content-block
             max-width: 588px
             margin-top: 40px
-            +max-screen($breakpoint-sm)
+            +max-screen(1200px)
+                max-width: 80%
+            +max-screen($breakpoint-lg)
+                max-width: 70%
+            +max-screen($breakpoint-md)
+                max-width: 50%
+            +max-screen(720px)
                 text-align: center
-                max-width: 90%
-                margin-left: auto
-                margin-right: auto
+                max-width: none
     .img_block
         position: absolute
         top: 0
@@ -74,15 +87,27 @@
                 position: absolute
                 top: -80%
                 right: -25%
+
             &1
                 z-index: 20
+                +max-screen($breakpoint-lg)
+                    top: -50%
+                +max-screen($breakpoint-md)
+                    top: -55%
+                +max-screen(720px)
+                    top: -50%
+                +max-screen($breakpoint-sm)
+                    right: -50%
+                    top: -45%
+                    z-index: -1
+                +max-screen(375px)
+                    top: -15%
             &2
                 z-index: 15
             &3
                 z-index: 10
             &4
                 z-index: 5
-
 
         +min-screen($breakpoint-xxxl)
             width: 80%
@@ -95,15 +120,24 @@
             max-width: 900px
         +max-screen(1200px)
             opacity: 0.9
-            width: 90%
+            width: 85%
+        +max-screen($breakpoint-lg)
+            width: 80%
         +max-screen($breakpoint-md)
-            width: 90%
+            width: 80%
+        +max-screen(720px)
+            opacity: 0.85
+            width: 80%
+        +max-screen($breakpoint-sm)
+
     .fly-animation
         position: absolute
         bottom: 0
         left: 20%
         display: inline-block
         width: 120px
+        +max-screen($breakpoint-md)
+            width: 80px
         img
             width: 100%
             height: auto
