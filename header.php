@@ -8,7 +8,7 @@
 </head>
 
 
-<?php $body_classes = ''; ?>
+<?php $body_classes = 'not-loaded '; ?>
 <?php
 if (is_singular('services')):
     if (get_field('change_book_content_blocks_order') == true):
@@ -17,7 +17,7 @@ if (is_singular('services')):
 endif;
 ?>
 <body <?php body_class($body_classes); ?>>
-    <div class="overlay"></div>
+    <div class="loader-overlay"></div>
     <div class="site">
         <?php
         get_template_part('template-parts/header/header'); ?>

@@ -6,6 +6,9 @@
     z-index: 100
     background: rgba(255, 255, 249,0.7)
     transition: 0.3s ease-out
+    transform: translateY(0%)
+    .not-loaded &
+        transform: translateY(-100%)
     &.fixed_header
         position: fixed
         background: rgba(255,255,249,1)

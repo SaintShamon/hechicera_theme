@@ -25,10 +25,10 @@
             </div>
         </div>
     </div>
-    <div class="img_block">
+    <div class="img_block <?php if(sizeof($images)>1) echo 'hero-image-animation'; ?>">
         <?php if ($images): ?>
             <?php foreach($images as $idx => $img): ?>
-                <img class="<?php echo 'layer-' . ($idx + 1) ;?>" src="<?php echo $img; ?>" alt="<?php echo 'layer-' . ($idx + 1);?>">
+                <img class="<?php echo 'layer layer-' . ($idx + 1) ;?>" src="<?php echo $img; ?>" alt="<?php echo 'layer-' . ($idx + 1);?>">
             <?php endforeach ;?>
         <?php endif;?>
     </div>
