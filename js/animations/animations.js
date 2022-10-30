@@ -123,7 +123,7 @@ $(document).ready(function () {
                     yPercent: 0
                 }
             );
-            smoother.effects(heroImageLayer_1, { speed: 0.85 });
+            smoother.effects(heroImageLayer_1, { speed: 0.95 });
         }
 
 
