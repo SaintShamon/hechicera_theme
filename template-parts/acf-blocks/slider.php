@@ -8,6 +8,7 @@
     if($slider_row):
 ?>
 <section class="slider section" id="<?= esc_attr($id) ?>-section">
+    <div class="section-bg"></div>
     <div class="container">
         <div class="main_block">
             <?php if($title || $subtitle): ?>
