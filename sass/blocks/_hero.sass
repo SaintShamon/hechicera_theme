@@ -101,24 +101,26 @@
                 position: absolute
                 top: -80%
                 right: -25%
-
-            &1
-                z-index: 20
-                +max-screen($breakpoint-lg)
-                    top: -50%
                 +max-screen($breakpoint-md)
-                    top: -55%
-                +max-screen(720px)
+                    top: -60%
+                +max-screen($breakpoint-md)
                     top: -50%
-                +max-screen($breakpoint-sm)
-                    right: -50%
-                    top: -35%
-                    z-index: -1
                 +max-screen(450px)
-                    right: -40%
+                    top: -40%
                 +max-screen(400px)
                     top: -33%
-                    right: -33%
+            &1
+                z-index: 20
+                max-width: 70%
+                right: -15%
+                top: -60%
+                +max-screen($breakpoint-sm)
+                    top: -45%
+                +max-screen(450px)
+                    top: -40%
+                +max-screen(400px)
+                    top: -33%
+
             &2
                 z-index: 15
             &3
