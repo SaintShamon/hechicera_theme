@@ -6,6 +6,7 @@
     $form_bottom_text = get_field('form_bottom_text', 'options');
 ?>
 <footer class="footer">
+    <div class="section-bg"></div>
     <div class="container">
         <div class="footer_top_block">
             <div class="footer_menu_block">
