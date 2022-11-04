@@ -11,7 +11,7 @@
 ?>
 
 <section class="full_text_block section" id="<?= esc_attr($id) ?>-section">
-    <img class="section-bg bg-parallax" src="<?= $bg_img ?>"/>
+    <img class="section-bg bg-parallax" src="<?= $bg_img ?>" />
     <div class="container">
         <div class="main_block">
             <?php if($title || $subtitle): ?>
@@ -25,7 +25,7 @@
             </div>
             <?php endif; ?>
             <?php if($content_bl): ?>
-            <div class="content-block">
+            <div class="content-block text--size--30">
                 <?= $content_bl ?>
             </div>
             <?php endif; ?>

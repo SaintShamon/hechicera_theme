@@ -32,8 +32,8 @@
                             <path id="subheading-arc" d="M 12 150 a 138 138 0 0 0 276 0"></path>
                         </defs>
                         <use xlink:href="#heading-arc" fill="none"></use>
-                        <use xlink:href="#subheading-arc" fill="none"></use><text
-                            class="arc-heading__heading text--size--30" fill="#fff" text-anchor="middle">
+                        <use xlink:href="#subheading-arc" fill="none"></use><text class="arc-heading__heading"
+                            fill="#fff" text-anchor="middle">
                             <textPath startOffset="50%" xlink:href="#heading-arc"><?= $text_in_bottom  ?>
                             </textPath>
                             <!-- Inner circles-->
