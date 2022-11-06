@@ -43,7 +43,7 @@
                     </svg>
                 </div>
                 <div class="icon">
-                    <img src="<?= get_template_directory_uri() ?>/assets/images/icon/palm_img.svg" alt="">
+                    <img class="palm" src="<?= get_template_directory_uri() ?>/assets/images/icon/palm_img.svg" alt="">
                 </div>
             </div>
             <?php endif; ?>

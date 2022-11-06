@@ -1,7 +1,7 @@
 .hero
     z-index: 1
     .section-bg
-        background: $color-white
+        //background: $color-white
     &.section
         overflow: visible
         padding-bottom: 100px
@@ -102,28 +102,21 @@
         .layer-
             &1, &2, &3, &4
                 position: absolute
-                top: -80%
+                top: -90%
                 right: -25%
-                +max-screen($breakpoint-md)
-                    top: -60%
-                +max-screen($breakpoint-md)
-                    top: -50%
-                +max-screen(450px)
-                    top: -40%
-                +max-screen(400px)
-                    top: -33%
+
             &1
                 z-index: 20
-                max-width: 70%
-                right: -15%
-                top: -60%
+                bottom: 0
+                top: auto
+                
                 +max-screen($breakpoint-sm)
-                    top: -45%
+                    right: -50%
+                    z-index: -1
                 +max-screen(450px)
-                    top: -40%
+                    right: -40%
                 +max-screen(400px)
-                    top: -33%
-
+                    right: -33%
             &2
                 z-index: 15
             &3

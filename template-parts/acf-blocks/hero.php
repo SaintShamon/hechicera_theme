@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-    <div class="img_block <?php if(sizeof($images)>1) echo 'hero-image-animation'; ?>">
+    <div class="img_block <?php if(sizeof($images)>1) echo 'hero-image-animation'; ?> <?php if(sizeof($images)==1) echo 'hero-image-simple-animation'; ?>">
         <?php if ($images): ?>
             <?php foreach($images as $idx => $img): ?>
                 <img class="<?php echo 'layer layer-' . ($idx + 1) ;?>" src="<?php echo $img; ?>" alt="<?php echo 'layer-' . ($idx + 1);?>">

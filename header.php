@@ -24,3 +24,5 @@ endif;
 
 
         <main id="main">
+            <div class="parallax-bg">
+            </div>

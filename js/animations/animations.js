@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     //bg parallax
     smoother.effects(".bg-parallax", { speed: "auto" });
-
+    smoother.effects(".parallax-bg", { speed: 0.7 });
 
     //texts
     const textHero = document.querySelectorAll(".title-appear-hero");
@@ -124,6 +124,25 @@ $(document).ready(function () {
                 }
             );
             smoother.effects(heroImageLayer_1, { speed: 0.95 });
+        }
+        //hero image
+        const heroSimple = $('.hero-image-simple-animation');
+        if (heroSimple.length) {
+            let heroImageLayer_1 = hero.find('.layer-1');
+            
+            heroImageLayer_1.anim = gsap.fromTo(heroImageLayer_1,
+                {
+                    opacity: 0,
+                    yPercent: 10
+                },
+                {
+                    duration: 0.6,
+                    delay: 0.6,
+                    ease: "circ.out",
+                    opacity: 1,
+                    yPercent: 0
+                }
+            );
         }
 
 
@@ -281,17 +300,34 @@ $(document).ready(function () {
         $(".explore").each(function () {
             let block = $(this);
             let image = $(this).find('.arc-heading');
+            let palm = $(this).find('.palm');
             //bottle rotation
-            gsap.set(image, { rotate: 30 });
-            gsap.to(image, {
-                rotate: -30,
-                ease: "none",
+            gsap.set(image, { scale: 0.8 , opacity: 0 , yPercent: 10 });
+            gsap.set(palm, { yPercent: 100 });
+            image.anim = gsap.to(image, {
                 scrollTrigger: {
-                    trigger: block,
-                    // start: "top bottom", // the default values
-                    // end: "bottom top",
-                    scrub: true
+                    trigger: image,
+                    toggleActions: "play",
+                    start: "top 80%",
+                    markers: false,
                 },
+                duration: 0.7,
+                ease: "circ.out",
+                yPercent: 0,
+                scale: 1,
+                opacity: 1,
+                stagger: 0.1,
+            });
+            palm.anim = gsap.to(palm, {
+                scrollTrigger: {
+                    trigger: image,
+                    toggleActions: "play",
+                    start: "top 70%",
+                    markers: false,
+                },
+                duration: 0.5,
+                ease: "circ.out",
+                yPercent: 0,
             });
         });
 
