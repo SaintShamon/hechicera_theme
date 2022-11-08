@@ -49,7 +49,6 @@
 	&-3
 		transition-delay: 0.3s
 
-
 .title-appear
 	.split-line
 		overflow: hidden
@@ -82,3 +81,5 @@
 	width: 100%
 	height: 100%
 	opacity: 0.15
+	+max-screen($breakpoint-sm)
+		transform: translate(0px, 0px) !important
