@@ -31,7 +31,7 @@ function mainslider() {
                     }
                 },
                 {
-                    breakpoint: 587,
+                    breakpoint: 769,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,

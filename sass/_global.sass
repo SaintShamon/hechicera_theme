@@ -21,7 +21,6 @@ img
 	width: 100%
 	height: auto
 
-
 body
 	div.is-ajax-search-details,
 	div.is-ajax-search-result
@@ -40,3 +39,10 @@ body
 		font-family: $font-family-title
 		color: $default-text-color
 		background: rgba(255,255,255,.95)
+
+.inner-page
+	margin-top: 120px
+	+max-screen($breakpoint-xl)
+		margin-top: 100px
+		+max-screen($breakpoint-sm)
+			margin-top: 60px
