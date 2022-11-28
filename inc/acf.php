@@ -26,7 +26,13 @@ if( function_exists('acf_add_options_page') ) {
 		'page_title' 	=> 'Theme Footer Settings',
 		'menu_title'	=> 'Footer',
 		'menu_slug' 	=> 'theme-general-settings_bottom',
-	));	
+	));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Theme Page Settings',
+        'menu_title'	=> 'Page',
+        'menu_slug' 	=> 'theme-general-settings_center',
+    ));
 }
 
 
