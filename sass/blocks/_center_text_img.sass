@@ -1,9 +1,11 @@
 .center_text_img
     +max-screen($breakpoint-sm)
         margin-top: 50px
+
     &.section
         +max-screen(1200px)
             padding-bottom: 60px
+
     .main_block
         max-width: 1000px
         margin: 0 auto
@@ -16,57 +18,83 @@
 
     .inner_block
         position: relative
-        margin: 200px 0
+        margin: 200px auto
         padding: 60px 30px 48px
-        background-image: url('../assets/images/white_bg.svg')
-        background-size: cover
-        background-position: top
-        background-repeat: no-repeat
-        &::after
-            position: absolute
+
+        &::after, &::before
             content: ''
-            width: 100%
-            height: 12px
+            position: absolute
+            width: 60%
+            height: 100%
+            mask-image: url('../assets/images/white_bg.svg')
+            mask-size: cover
+            mask-repeat: no-repeat
+            background: #fff
+
+        &::after
             left: 0
-            bottom: -12px
-            background-image: url('../assets/images/white_bg.svg')
-            background-size: cover
-            background-position: bottom
-            background-repeat: no-repeat
+            top: 0
+            mask-position: left top
+
+        &::before
+            content: ''
+            right: 0
+            bottom: 0
+            mask-position: right bottom
+
+
+        //background-image: url('../assets/images/white_bg.svg')
+        //background-size: cover
+        //background-position: top
+        //background-repeat: no-repeat
+        //&::after
+        //    position: absolute
+        //    content: ''
+        //    width: 100%
+        //    height: 12px
+        //    left: 0
+        //    bottom: -12px
+        //    background-image: url('../assets/images/white_bg.svg')
+        //    background-size: cover
+        //    background-position: bottom
+        //    background-repeat: no-repeat
         +max-screen(1640px)
-            background-size: 100%
+        //background-size: 100%
         +max-screen($breakpoint-xl)
-            margin: 120px 0
+            margin: 120px auto
         +max-screen(1200px)
-            margin: 50px 0
+            margin: 50px auto
             padding: 30px
         +max-screen($breakpoint-lg)
-            background-size: cover
-            background-position: center
+            //background-size: cover
+            //background-position: center
             padding: 20px 30px
-            // background-color: $color-white
-            &::after
-                height: 60%
-                left: -0.5%
-                width: 101%
-            &::before
-                position: absolute
-                content: ''
-                width: 101%
-                height: 60%
-                left: -0.5%
-                top: -12px
-                background-image: url('../assets/images/white_bg.svg')
-                background-size: cover
-                background-position: top
-                background-repeat: no-repeat
+    // background-color: $color-white
+    //&::after
+    //    height: 60%
+    //    left: -0.5%
+    //    width: 101%
+    //&::before
+    //    position: absolute
+    //    content: ''
+    //    width: 101%
+    //    height: 60%
+    //    left: -0.5%
+    //    top: -12px
+    //    background-image: url('../assets/images/white_bg.svg')
+    //    background-size: cover
+    //    background-position: top
+    //    background-repeat: no-repeat
+
     .content-block
         margin-bottom: 30px
         text-align: center
         position: relative
         z-index: 1
+
     .title_block
         text-align: center
         position: relative
         z-index: 1
+
     .section-bg.bg-parallax
