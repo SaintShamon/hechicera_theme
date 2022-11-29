@@ -183,9 +183,9 @@ $(document).ready(function () {
             });
         }
 
-        //butterfly
+        //product animations
         $('.product').each(function () {
-            let product = $(this);
+            let triggerBlock = $(this);
             let animation = $(this).find('.fly-animation');
             if (animation.length) {
                 if (animation.hasClass('butterfly-animation')) {
@@ -195,7 +195,7 @@ $(document).ready(function () {
                         x: -400,
                         ease: "none",
                         scrollTrigger: {
-                            trigger: product,
+                            trigger: triggerBlock,
                             start: "top bottom", // the default values
                             end: "center top",
                             scrub: true
@@ -208,7 +208,7 @@ $(document).ready(function () {
                         x: -100,
                         ease: "none",
                         scrollTrigger: {
-                            trigger: product,
+                            trigger: triggerBlock,
                             start: "top bottom", // the default values
                             end: "center center",
                             scrub: true
@@ -224,7 +224,7 @@ $(document).ready(function () {
                         x: 160,
                         ease: "none",
                         scrollTrigger: {
-                            trigger: product,
+                            trigger: triggerBlock,
                             start: "top bottom", // the default values
                             end: "center center",
                             scrub: true
@@ -236,7 +236,7 @@ $(document).ready(function () {
                         x: -200,
                         ease: "none",
                         scrollTrigger: {
-                            trigger: product,
+                            trigger: triggerBlock,
                             start: "top bottom", // the default values
                             end: "center center",
                             scrub: true
@@ -248,7 +248,7 @@ $(document).ready(function () {
                         x: 250,
                         ease: "none",
                         scrollTrigger: {
-                            trigger: product,
+                            trigger: triggerBlock,
                             start: "top bottom", // the default values
                             end: "center center",
                             scrub: true
@@ -256,6 +256,84 @@ $(document).ready(function () {
                     });
                 }
             }
+        });
+
+        //text_block_repeater animations
+        $('.text_block_repeater').each(function () {
+           let triggerBlock = $(this);
+           let animations = $(this).find('.fly-animation');
+           if(animations.length) {
+               animations.each(function () {
+                   if($(this).hasClass('butterfly-animation')) {
+                       gsap.to($(this), {
+                           rotate: 15,
+                           y: 200,
+                           x: 220,
+                           ease: "none",
+                           scrollTrigger: {
+                               trigger: triggerBlock,
+                               start: "20% bottom",
+                               end: "center top",
+                               scrub: true
+                           },
+                       });
+                   } else if($(this).hasClass('dragonfly-animation')) {
+                       gsap.to($(this), {
+                           rotate: -25,
+                           y: 250,
+                           x: 40,
+                           ease: "none",
+                           scrollTrigger: {
+                               trigger: triggerBlock,
+                               start: "5% bottom",
+                               end: "center top",
+                               scrub: true,
+                           }
+                       });
+                   } else if($(this).hasClass('bees-animation')) {
+                       let bee1 = $(this).find('img:nth-child(1)');
+                       let bee2 = $(this).find('img:nth-child(2)');
+                       let bee3 = $(this).find('img:nth-child(3)');
+                       gsap.to(bee1, {
+                           rotate: 10,
+                           y: -10,
+                           x: 160,
+                           ease: "none",
+                           scrollTrigger: {
+                               trigger: triggerBlock,
+                               start: "60% bottom",
+                               end: "bottom center",
+                               scrub: true
+                           },
+                       });
+                       gsap.to(bee2, {
+                           rotate: -20,
+                           y: 20,
+                           x: -200,
+                           ease: "none",
+                           scrollTrigger: {
+                               trigger: triggerBlock,
+                               start: "60% bottom",
+                               end: "bottom center",
+                               scrub: true
+                           },
+                       });
+                       gsap.to(bee3, {
+                           rotate: 10,
+                           y: 200,
+                           x: 250,
+                           ease: "none",
+                           scrollTrigger: {
+                               trigger: triggerBlock,
+                               start: "60% bottom",
+                               end: "bottom center",
+                               scrub: true
+                           },
+                       });
+                   }
+               })
+           }
+
         });
 
 
