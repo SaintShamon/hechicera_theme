@@ -1,8 +1,7 @@
 		<?php get_template_part('template-parts/footer/footer'); ?>
-	</main>
+		</main>
 
-	<?php wp_footer(); ?>
-	</div>
-	
-	</body>
-	</html>
+		<?php wp_footer(); ?>
+		</div>
+		</body>
+		</html>
