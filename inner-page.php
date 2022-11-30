@@ -6,8 +6,9 @@
 
 <?php get_header(); ?>
 
-<div id="page-<?php the_ID(); ?>" <?php post_class('inner-page'); ?>>
+<div id="page-<?php the_ID(); ?>" <?php post_class(''); ?>>
     <div class="page-blocks">
+        <section class="inner-page"></section>
         <?php 
                 if ( ! post_password_required() ) :
                     // Your custom code should here
