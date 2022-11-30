@@ -2,11 +2,51 @@
     width: 100vw
     height: 100vh
     min-height: 600px
-    video
+    position: relative
+
+    #v-player
+        position: relative
+
+        video
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    .v-player-dimensions
         width: 100%
-        height: 100%
-        object-fit: cover
+        height: 100vh
+        min-height: 600px
+        +max-screen($breakpoint-lg)
+            min-height: auto
+            height: auto
+
     +max-screen($breakpoint-lg)
-        min-height: 500px
-    +max-screen($breakpoint-md)
-        min-height: 400px
+        min-height: auto
+        height: auto
+
+    .video-control-button
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 10
+
+        .video-btn
+            width: 70px
+            height: 70px
+            background-image: url("../assets/images/icon/icon-play.svg")
+            background-position: center
+            background-size: contain
+            opacity: .5
+            transition: all .4s ease
+            +max-screen($breakpoint-md)
+                width: 40px
+                height: 40px
+
+            &:hover
+                opacity: 1
+                cursor: pointer
+
+            &.pause-button
+                display: none
+
