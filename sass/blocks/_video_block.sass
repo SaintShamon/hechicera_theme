@@ -2,6 +2,11 @@
     width: 100vw
     height: 100vh
     min-height: 600px
-    .video
+    video
         width: 100%
         height: 100%
+        object-fit: cover
+    +max-screen($breakpoint-lg)
+        min-height: 500px
+    +max-screen($breakpoint-md)
+        min-height: 400px

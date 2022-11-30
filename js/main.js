@@ -18,12 +18,11 @@ import {
     mainslider
 } from './template-parts/blocks/slider';
 
-
-
-
-
 // import smooth scroll
 import './animations/animations';
+
+// import videojs
+import './libs/videojs';
 
 header();
 footer()

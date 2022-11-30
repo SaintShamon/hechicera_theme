@@ -49,14 +49,34 @@ body
 
 .page-header
 	position: relative
-	padding-top: 200px
+	padding-top: 160px
+	+max-screen($breakpoint-lg)
+		padding-top: 120px
+	+max-screen($breakpoint-md)
+		padding-top: 100px
+	+max-screen($breakpoint-sm)
+		padding-top: 60px
 	.page-title
 		font-size: 100px
 		text-align: center
+		color: $color-yellow
+		+max-screen($breakpoint-lg)
+			font-size: 80px
+		+max-screen($breakpoint-md)
+			font-size: 65px
+		+max-screen($breakpoint-sm)
+			font-size: 45px
 	.page-subtitle
 		font-size: 45px
 		font-weight: 500
 		text-align: center
+		color: $color-yellow
 		text-transform: uppercase
 		display: block
+		+max-screen($breakpoint-lg)
+			font-size: 38px
+		+max-screen($breakpoint-md)
+			font-size: 30px
+		+max-screen($breakpoint-sm)
+			font-size: 22px
 

@@ -15,12 +15,14 @@ $query = new WP_Query($args);
 
 ?>
 <div class="page-header">
-    <?php if ($title): ?>
-        <h1 class="page-title"><?php echo $title; ?></h1>
-    <?php endif; ?>
-    <?php if ($subtitle) : ?>
-        <span class="page-subtitle"><?php echo $subtitle; ?></span>
-    <?php endif; ?>
+    <div class="container">
+        <?php if ($title): ?>
+            <h1 class="page-title"><?php echo $title; ?></h1>
+        <?php endif; ?>
+        <?php if ($subtitle) : ?>
+            <span class="page-subtitle"><?php echo $subtitle; ?></span>
+        <?php endif; ?>
+    </div>
 </div>
 <div class="product-list section">
     <div class="container">
