@@ -17,11 +17,11 @@
         height: 100vh
         min-height: 600px
         +max-screen($breakpoint-lg)
-            min-height: auto
-            height: auto
+            min-height: auto !important
+            height: auto !important
     .vjs-control-text
         display: none
-        &::after
+        &::after, &::before
             display: none
 
     +max-screen($breakpoint-lg)
