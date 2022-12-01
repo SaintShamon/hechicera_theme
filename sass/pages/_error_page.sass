@@ -1,7 +1,6 @@
 .error404 .error__page
-    padding: 0
+    padding-top: 130px
     +max-screen($breakpoint-lg)
-        padding-top: 130px
     +max-screen($breakpoint-sm)
         padding-top: 86px
 
@@ -16,11 +15,10 @@
 
     &__title
         text-align: center
-        font-size: 130px
+        font-size: 200px
         line-height: 0.6
         font-family: $font-family-title
         +max-screen($breakpoint-lg)
-            font-size: 200px
             margin-bottom: 28px
         +max-screen($breakpoint-md)
             font-size: 120px
@@ -60,10 +58,10 @@
         display: flex
         align-items: center
         justify-content: center
-        +max-screen($breakpoint-lg)
-            flex-direction: column
+        flex-direction: column
 
     #app-wrapper
-        +max-screen($breakpoint-lg)
-            width: 100%
+        width: 100%
+    .footer
+        width: 100%
 
