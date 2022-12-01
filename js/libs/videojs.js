@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     if (video.length) {
         var videoPlayer = videojs('#v-player', {
-            autoplay: 'muted',
+            autoplay: false,
         });
 
         let videoBtn = video.find('.video-btn');
