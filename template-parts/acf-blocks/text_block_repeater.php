@@ -46,14 +46,14 @@ if ($property_list):
                             case 'butterfly':
                                 ?>
                                 <span class="butterfly-animation fly-animation"><img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/animations/butterfly.png"
+                                            src="<?php echo get_template_directory_uri(); ?>/assets/animations/butterfly_2.png"
                                             alt="Butterfly"></span>
                                 <?php
                                 break;
                             case 'dragonfly':
                                 ?>
                                 <span class="dragonfly-animation fly-animation"><img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/animations/dragonfly.png"
+                                            src="<?php echo get_template_directory_uri(); ?>/assets/animations/dragonfly_2.png"
                                             alt="Dragonfly"></span>
                                 <?php
                                 break;

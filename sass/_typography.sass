@@ -191,6 +191,30 @@ h6, .h6
 			font-size: 30px
 	&--size--67,&--size--67 *
 		font-size: 67px
+		sup *
+			font-size: 40px
+			+max-screen(1640px)
+				font-size: 38px
+			+max-screen($breakpoint-xl)
+				font-size: 36px
+			+max-screen(1200px)
+				font-size: 30px
+			+max-screen($breakpoint-sm)
+				font-size: 24px
+			+max-screen(400px)
+				font-size: 20px
+		small *
+			font-size: 50px
+			+max-screen(1640px)
+				font-size: 48px
+			+max-screen($breakpoint-xl)
+				font-size: 43px
+			+max-screen(1200px)
+				font-size: 30px
+			+max-screen($breakpoint-sm)
+				font-size: 24px
+			+max-screen(400px)
+				font-size: 20px
 		+max-screen(1640px)
 			font-size: 65px
 		+max-screen($breakpoint-xl)

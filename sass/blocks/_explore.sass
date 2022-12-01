@@ -3,12 +3,15 @@
         padding-top: 100px
         +max-screen($breakpoint-xxl)
             padding-top: 0
+
     .title_block
         margin-bottom: 80px
         +max-screen($breakpoint-xl)
             margin-bottom: 40px
+
         h2
             text-align: center
+
             span
                 font-size: 83px
                 text-transform: uppercase
@@ -22,11 +25,14 @@
                     font-size: 44px
                 +max-screen($breakpoint-sm)
                     font-size: 34px
+
     .content-block
         max-width: 90%
         margin: 0 auto
+
         p
             text-align: center
+
             img
                 width: 17px
                 height: 24px
@@ -39,6 +45,7 @@
                     margin: 30px 0 15px
                 +max-screen($breakpoint-sm)
                     margin: 30px 0 -50px
+
     .arc-heading
         svg
             +max-screen(1640px)
@@ -50,12 +57,13 @@
             +max-screen(425px)
                 width: 225px
                 height: 225px
-        // Debug colours: shows text path
-        // path
-        //   stroke lime
-        //   stroke-width 1px
+    // Debug colours: shows text path
+    // path
+    //   stroke lime
+    //   stroke-width 1px
 
     .arc-heading__heading
+
     .arc-heading__subheading
         font-family: $font-family-title
         text-transform: uppercase
@@ -83,18 +91,52 @@
             margin: 100px auto -150px
         +max-screen($breakpoint-xl)
             margin: 50px auto -150px
+
     .icon
         position: absolute
         width: 34px
         height: 48px
         top: 38%
-        left: calc( 50% - 17px )
+        left: calc(50% - 17px)
         overflow: hidden
         +max-screen(1640px)
             width: 17px
             height: 24px
-            left: calc( 50% - 8.5px )
+            left: calc(50% - 8.5px)
         +max-screen($breakpoint-xm)
             top: 38%
         +max-screen($breakpoint-sm)
             top: 30%
+
+    .butterfly-animation
+        position: absolute
+        bottom: 0
+        left: 0
+        display: inline-block
+        width: 100%
+        height: 100%
+
+        img
+            position: absolute
+            height: auto
+
+            &:first-child
+                width: 125px
+                top: 20%
+                right: 8%
+
+            &:nth-child(2)
+                width: 139px
+                bottom: 11%
+                left: 7%
+
+    .cricket-animation
+        position: absolute
+        top: 12%
+        left: 14%
+        display: inline-block
+        width: 126px
+
+        img
+            width: 100%
+            height: auto
