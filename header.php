@@ -15,11 +15,9 @@ $body_classes = 'not-loaded ';
 
 if (is_post_type_archive('our-rums')) :
     $page_bg = get_field('our_rums_bg_img', 'option');
-elseif (is_front_page()) :
+else :
     $page_bg = get_field('general_bg_img', 'option');
     $opacity = '0.15';
-else:
-    $page_bg = '';
 endif;
 
 ?>
