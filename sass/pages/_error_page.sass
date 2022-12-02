@@ -1,17 +1,26 @@
 .error404 .error__page
-    padding-top: 130px
-    +max-screen($breakpoint-lg)
+    padding-top: 100px
+    margin: 0 !important
+    height: 100vh
+    min-height: 450px
+    +max-screen($breakpoint-md)
+        min-height: 400px
     +max-screen($breakpoint-sm)
         padding-top: 86px
+        min-height: 350px
 
     .container
         padding: 0
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
 
     &__content
-        padding-bottom: 60px
+
 
         .error__page__title
-            padding: 20px 0 0
+        padding: 20px 0 0
 
 
     &__title
@@ -63,6 +72,7 @@
 
     #app-wrapper
         width: 100%
+
     .footer
         width: 100%
 
