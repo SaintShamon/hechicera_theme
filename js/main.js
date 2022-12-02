@@ -18,12 +18,15 @@ import {
     mainslider
 } from './template-parts/blocks/slider';
 
-
+import {
+    find_us_form
+} from './template-parts/blocks/find_us';
 
 header();
 footer()
 //lazy();
 mainslider();
+find_us_form();
 //scrollToAnchor();
 
 // import smooth scroll
