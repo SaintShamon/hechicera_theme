@@ -1,12 +1,18 @@
 .product-list
     margin-bottom: 100px
+    .container
+        display: flex
+        flex-direction: column
+        gap: 70px 0
 
 .product-list__item
     display: flex
     align-items: center
     justify-content: space-between
-    height: 600px
+    height: 500px
 
+    +max-screen($breakpoint-xl)
+        height: 450px
     +max-screen($breakpoint-xm)
         height: 400px
     +max-screen($breakpoint-lg)
@@ -15,23 +21,21 @@
         align-items: center
         height: auto
 
-    &:not(:last-of-type)
-        margin-bottom: 70px
 
     &.left-text
-    +max-screen($breakpoint-lg)
-        .text
-            order: 2
-        .image
-            order: 1
+        +max-screen($breakpoint-lg)
+            .text
+                order: 2
+            .image
+                order: 1
     &.right-text
         .text
             order: 2
-    +max-screen($breakpoint-lg)
-        .text
-            order: 2
-        .image
-            order: 1
+        +max-screen($breakpoint-lg)
+            .text
+                order: 2
+            .image
+                order: 1
     .text
         flex: 0 0 45%
         text-align: center
@@ -51,6 +55,10 @@
         height: 100%
         flex: 0 0 52%
         position: relative
+        +max-screen($breakpoint-xl)
+            height: 450px
+        +max-screen($breakpoint-xm)
+            height: 400px
         +max-screen($breakpoint-lg)
             flex: 0 0 auto
             height: 350px

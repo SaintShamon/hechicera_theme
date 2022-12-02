@@ -17,10 +17,10 @@ $query = new WP_Query($args);
 <div class="page-header">
     <div class="container">
         <?php if ($title): ?>
-            <h1 class="page-title"><?php echo $title; ?></h1>
+            <h1 class="text--size--67 page-title"><?php echo $title; ?></h1>
         <?php endif; ?>
         <?php if ($subtitle) : ?>
-            <span class="page-subtitle"><?php echo $subtitle; ?></span>
+            <span class="text--size--39 page-subtitle"><?php echo $subtitle; ?></span>
         <?php endif; ?>
     </div>
 </div>
