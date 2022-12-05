@@ -15,9 +15,11 @@ $body_classes = 'not-loaded ';
 
 if (is_post_type_archive('our-rums')) :
     $page_bg = get_field('our_rums_bg_img', 'option');
-else :
-    $page_bg = get_field('general_bg_img', 'option');
+elseif (is_front_page()) :
+    $page_bg = get_field('home_bg_img', 'option');
     $opacity = '0.15';
+else :
+    $page_bg = get_field('general_bg', 'option');
 endif;
 
 ?>
@@ -32,10 +34,15 @@ endif;
 <body <?php body_class($body_classes); ?>>
 <div class="loader-overlay"></div>
 <div class="site">
-    <?php
-    get_template_part('template-parts/header/header'); ?>
+    <?php get_template_part('template-parts/header/header'); ?>
 
-
+    <?php if (is_post_type_archive('our-rums') || is_front_page()) : ?>
     <main id="main">
         <div class="parallax-bg" style="background: url('<?php echo $page_bg; ?>'); opacity: <?php echo $opacity; ?>">
         </div>
+        <?php else : ?>
+        <main id="main">
+            <div class="parallax-bg"
+                 style="background: <?php echo $page_bg; ?>">
+            </div>
+            <?php endif; ?>

@@ -17,7 +17,7 @@ $(document).ready(function () {
     });
 
     //bg parallax
-    smoother.effects(".bg-parallax", {speed: "auto"});
+    smoother.effects(".bg-parallax", {speed: .9});
     smoother.effects(".parallax-bg", {speed: 0.7});
 
     //texts

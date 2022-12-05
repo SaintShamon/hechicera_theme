@@ -1,2 +1,12 @@
 .full_bg_block
-    min-height: 100vh
+    height: 100vh
+    +min-screen($breakpoint-xxl)
+        min-height: 900px
+    +max-screen($breakpoint-xxl)
+        min-height: 850px
+    +max-screen($breakpoint-xl)
+        min-height: 650px
+    +max-screen($breakpoint-lg)
+        min-height: 500px
+    +max-screen($breakpoint-sm)
+        min-height: 400px
