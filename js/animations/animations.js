@@ -17,8 +17,14 @@ $(document).ready(function () {
     });
 
     //bg parallax
-    smoother.effects(".bg-parallax", {speed: .9});
     smoother.effects(".parallax-bg", {speed: 0.7});
+
+    if ($('body').hasClass('page-template-a_family_from_colombia_page')) {
+        smoother.effects(".bg-parallax", {speed: 0.9});
+    } else {
+        smoother.effects(".bg-parallax", {speed: 'auto'});
+    }
+
 
     //texts
     const textHero = document.querySelectorAll(".title-appear-hero");
