@@ -33,6 +33,12 @@ if( function_exists('acf_add_options_page') ) {
         'menu_title'	=> 'Page',
         'menu_slug' 	=> 'theme-general-settings_center',
     ));
+
+	// acf_add_options_sub_page(array(
+    //     'page_title' 	=> 'Theme Shop Adress Settings',
+    //     'menu_title'	=> 'Find Us',
+    //     'menu_slug' 	=> 'theme-general-settings_find_us',
+    // ));
 }
 
 

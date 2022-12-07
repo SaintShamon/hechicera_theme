@@ -6,7 +6,8 @@
 
     $title = get_sub_field('title_block');
     $content = get_sub_field('content');
-    if($title ||  $content):
+    $add_country_block = get_field('add_country_block', 'option');
+    if($title || $content):
 ?>
 
 <section class="find_us section" id="<?= esc_attr($id) ?>-section">
@@ -23,7 +24,47 @@
             </div>
             <?php endif; ?>
         </div>
+
         <div class="main_block">
+            <?php
+                $args = array(
+                'type'                     => 'locations',
+                'child_of'                 => 0,
+                'parent'                   => '',
+                'orderby'                  => 'name',
+                'order'                    => 'ASC',
+                'hide_empty'               => 1,
+                'hierarchical'             => 1,
+                'taxonomy'                 => 'country',
+                'pad_counts'               => false );
+                $countries = get_categories($args);
+            ?>
+            <?php
+                $args = array(
+                'type'                     => 'locations',
+                'child_of'                 => 0,
+                'parent'                   => '',
+                'orderby'                  => 'name',
+                'order'                    => 'ASC',
+                'hide_empty'               => 1,
+                'hierarchical'             => 1,
+                'taxonomy'                 => 'city',
+                'pad_counts'               => false );
+                $cities = get_categories($args);
+            ?>
+            <?php
+                $args = array(
+                'type'                     => 'locations',
+                'child_of'                 => 0,
+                'parent'                   => '',
+                'orderby'                  => 'name',
+                'order'                    => 'ASC',
+                'hide_empty'               => 1,
+                'hierarchical'             => 1,
+                'taxonomy'                 => 'category',
+                'pad_counts'               => false );
+                $categories = get_categories($args);
+            ?>
             <form action="">
                 <div class="select_container">
                     <label for="oCountryFilter">Country</label>
@@ -33,45 +74,11 @@
                         <div class="o_input_arrow"></div>
                         <div class="scroll-element" style="">
                             <ul class="list drop-down-ul map" id="o_countries">
-                                <li data-city-ref="" id="France">
-                                    <span>France</span>
+                                <?php foreach ($countries as $country) { ?>
+                                <li data-city-ref="" id="<?php echo $country->name; ?>">
+                                    <span><?php echo $country->name; ?></span>
                                 </li>
-                                <li data-city-ref="" id="Italy">
-                                    <span>Italy</span>
-                                </li>
-                                <li data-city-ref="" id="Czech">
-                                    <span>Czech</span>
-                                </li>
-                                <li data-city-ref="" id="Colombia">
-                                    <span>Colombia</span>
-                                </li>
-                                <li data-city-ref="" id="Hungary">
-                                    <span>Hungary</span>
-                                </li>
-                                <li data-city-ref="" id="Peru">
-                                    <span>Peru</span>
-                                </li>
-                                <li data-city-ref="" id="Benelux">
-                                    <span>Benelux</span>
-                                </li>
-                                <li data-city-ref="" id="Slovenia">
-                                    <span>Slovenia</span>
-                                </li>
-                                <li data-city-ref="" id="Germany">
-                                    <span>Germany</span>
-                                </li>
-                                <li data-city-ref="" id="United_Kingdom">
-                                    <span>United Kingdom</span>
-                                </li>
-                                <li data-city-ref="" id="Denmark">
-                                    <span>Denmark</span>
-                                </li>
-                                <li data-city-ref="" id="Sweden">
-                                    <span>Sweden</span>
-                                </li>
-                                <li data-city-ref="" id="Norway">
-                                    <span>Norway </span>
-                                </li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
@@ -84,12 +91,11 @@
                         <div class="o_input_arrow"></div>
                         <div class="scroll-element">
                             <ul class="list drop-down-ul map" id="o_cities">
-                                <li data-city-ref="" id="Paris">
-                                    <span>Paris</span>
+                                <?php foreach ($cities as $city) { ?>
+                                <li data-city-ref="" id="<?php echo $city->name; ?>">
+                                    <span><?php echo $city->name; ?></span>
                                 </li>
-                                <li data-city-ref="" id="Rome">
-                                    <span>Rome</span>
-                                </li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
@@ -102,12 +108,11 @@
                         <div class="o_input_arrow"></div>
                         <div class="scroll-element">
                             <ul class="list drop-down-ul map" id="o_bars">
-                                <li data-city-ref="" id="Bar">
-                                    <span>Bar\Restaurant</span>
+                                <?php  foreach ($categories as $category) {  ?>
+                                <li data-city-ref="" id="<?php echo $category->name; ?>">
+                                    <span><?php echo $category->name; ?></span>
                                 </li>
-                                <li data-city-ref="" id="Shops">
-                                    <span>Shops</span>
-                                </li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
