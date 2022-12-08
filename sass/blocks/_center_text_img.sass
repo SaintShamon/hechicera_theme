@@ -2,17 +2,28 @@
     height: 100vh
     display: flex
     align-items: center
+    //+min-screen($breakpoint-xxl)
+    //    min-height: 800px
+    //+max-screen($breakpoint-xxl)
+    //    min-height: 720px
+    //+max-screen($breakpoint-xl)
+    //    min-height: 650px
+    //+max-screen($breakpoint-lg)
+    //    min-height: 500px
+    //+max-screen($breakpoint-sm)
+    //    min-height: 400px
+    //    margin-top: 50px
     +min-screen($breakpoint-xxl)
-        min-height: 800px
-    +max-screen($breakpoint-xxl)
-        min-height: 720px
-    +max-screen($breakpoint-xl)
-        min-height: 650px
+        min-height: 525px
     +max-screen($breakpoint-lg)
-        min-height: 500px
+        height: 425px
+    +max-screen($breakpoint-md)
+        height: 350px
     +max-screen($breakpoint-sm)
-        min-height: 400px
-        margin-top: 50px
+        height: 275px
+        min-height: auto
+    .bg-parallax
+        height: auto
 
     &.section
         +max-screen(1200px)
