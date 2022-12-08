@@ -18,12 +18,13 @@ $(document).ready(function () {
 
     //bg parallax
     smoother.effects(".parallax-bg", {speed: 0.7});
+    smoother.effects(".bg-parallax", {speed: 'auto'});
 
-    if ($('body').hasClass('page-template-a_family_from_colombia_page')) {
-        smoother.effects(".bg-parallax", {speed: 0.9});
-    } else {
-        smoother.effects(".bg-parallax", {speed: 'auto'});
-    }
+    // if ($('body').hasClass('page-template-a_family_from_colombia_page')) {
+    //     smoother.effects(".bg-parallax", {speed: 0.9});
+    // } else {
+    //     smoother.effects(".bg-parallax", {speed: 'auto'});
+    // }
 
 
     //texts
@@ -350,7 +351,7 @@ $(document).ready(function () {
                         gsap.to($(this), {
                             rotate: 40,
                             y: -150,
-                            x: 210,
+                            x: 110,
                             ease: "none",
                             scrollTrigger: {
                                 trigger: triggerBlock,
@@ -363,9 +364,9 @@ $(document).ready(function () {
                         let butterfly1 = $(this).find('img:nth-child(1)');
                         let butterfly2 = $(this).find('img:nth-child(2)');
                         gsap.to(butterfly1, {
-                            rotate: -30,
-                            y: 140,
-                            x: -100,
+                            rotate: 35,
+                            y: -80,
+                            x: -50,
                             ease: "none",
                             scrollTrigger: {
                                 trigger: triggerBlock,
@@ -375,9 +376,9 @@ $(document).ready(function () {
                             },
                         });
                         gsap.to(butterfly2, {
-                            rotate: 50,
-                            y: -230,
-                            x: 80,
+                            rotate: -50,
+                            y: -90,
+                            x: -50,
                             ease: "none",
                             scrollTrigger: {
                                 trigger: triggerBlock,

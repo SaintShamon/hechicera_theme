@@ -1,6 +1,7 @@
 .explore
     .main_block
         padding-top: 100px
+        position: relative
         +max-screen($breakpoint-xxl)
             padding-top: 0
 
@@ -124,11 +125,15 @@
                 width: 125px
                 top: 20%
                 right: 8%
+                +max-screen($breakpoint-sm)
+                    width: 80px
 
             &:nth-child(2)
                 width: 139px
                 bottom: 11%
                 left: 7%
+                +max-screen($breakpoint-sm)
+                    width: 85px
 
     .cricket-animation
         position: absolute
@@ -136,7 +141,8 @@
         left: 14%
         display: inline-block
         width: 126px
-
+        +max-screen($breakpoint-sm)
+            width: 81px
         img
             width: 100%
             height: auto
