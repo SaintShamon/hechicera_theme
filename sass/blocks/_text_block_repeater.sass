@@ -49,16 +49,21 @@
         left: 6%
         display: inline-block
         width: 120px
+        +max-screen($breakpoint-sm)
+            width: 80px
         img
             width: 100%
             height: auto
+
 
     .dragonfly-animation
         position: absolute
         top: 5%
         right: 12%
         display: inline-block
-        width: 312px
+        width: 220px
+        +max-screen($breakpoint-sm)
+            width: 90px
         img
             width: 100%
             height: auto

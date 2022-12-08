@@ -284,9 +284,9 @@ $(document).ready(function () {
                         });
                     } else if ($(this).hasClass('dragonfly-animation')) {
                         gsap.to($(this), {
-                            rotate: -25,
-                            y: 250,
-                            x: 40,
+                            rotate: -60,
+                            y: -90,
+                            x: -120,
                             ease: "none",
                             scrollTrigger: {
                                 trigger: triggerBlock,
