@@ -31,7 +31,7 @@
     .inner_block
         position: relative
         margin: 200px auto
-        padding: 60px 30px 48px
+        padding: 60px 30px
 
         &::after, &::before
             content: ''
@@ -99,15 +99,24 @@
     //    background-repeat: no-repeat
 
     .content-block
-        margin-bottom: 30px
         text-align: center
         position: relative
         z-index: 1
-
-    .title_block
-        text-align: center
-        position: relative
-        z-index: 1
+        p
+            margin: 0
+        h2
+            margin: 0
+            font-size: 30px
+            +max-screen(1640px)
+                font-size: 24px
+            +max-screen($breakpoint-xl)
+                font-size: 20px
+            +max-screen(1200px)
+                font-size: 18px
+    //.title_block
+    //    text-align: center
+    //    position: relative
+    //    z-index: 1
 
 .page-template-a_family_from_colombia_page
     .center_text_img
