@@ -1,4 +1,15 @@
 .find_us
+    #response
+        display: flex
+        flex-wrap: wrap
+        gap: 30px 20px
+        padding: 40px 0
+        .card
+            position: relative
+            width: calc((100% / 4) - (60px / 3))
+            color: #000
+            border-radius: 8px
+            box-shadow: 0 0 5px #0c0c0c
     &.section
         overflow: visible
         margin-bottom: 0
@@ -20,6 +31,8 @@
             margin-left: auto
             margin-right: auto
             margin-bottom: 30px
+            .list
+                width: 100%
             .input_container
                 position: relative
                 width: 100%

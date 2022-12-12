@@ -14,9 +14,9 @@ function theme_load_scripts()
     /*theme css*/
     wp_enqueue_style('main', get_template_directory_uri() . '/dist/main.min.css');
     wp_enqueue_style('slick', get_template_directory_uri() . '/js/libs/slick/slick.css');
-    // wp_enqueue_style( 'slick-theme',get_template_directory_uri() . '/js/libs/slick/slick-theme.css');
     wp_enqueue_style('animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '4.1.1');
     wp_enqueue_style('videojs', get_template_directory_uri() . '/js/libs/videojs/video-js.min.css', array(), '7.20.3');
+    wp_enqueue_style('nice-select', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css', array(), '1.1.0');
 }
 
 add_action('wp_footer', 'theme_scripts');
@@ -31,12 +31,11 @@ function theme_scripts()
     //main.js
     wp_enqueue_script('main', get_template_directory_uri() . '/dist/main.min.js');
 
+    wp_enqueue_script('nice-select', get_template_directory_uri() . '/js/libs/nice-select/jquery.nice-select.min.js', array('jquery'), '1.1.0', true);
 
-    wp_localize_script('main', 'customjs_ajax_object',
-        array(
-            'ajax_url' => admin_url('admin-ajax.php'),
-            'ajax_nonce' => wp_create_nonce("secure_nonce_name")
-        )
+    wp_enqueue_script('ajax-search', get_template_directory_uri() . '/js/ajax-search.js', array('jquery'), '', true);
+    wp_localize_script('ajax-search', 'wp_ajax',
+        array('ajax_url' => admin_url('admin-ajax.php'))
     );
 
 }
@@ -44,10 +43,10 @@ function theme_scripts()
 //additional variables
 function javascript_variables()
 { ?>
-<script type="text/javascript">
-var ajax_url = '<?php echo admin_url("admin-ajax.php"); ?>';
-var ajax_nonce = '<?php echo wp_create_nonce("secure_nonce_name"); ?>';
-</script><?php
+    <script type="text/javascript">
+        var ajax_url = '<?php echo admin_url("admin-ajax.php"); ?>';
+        var ajax_nonce = '<?php echo wp_create_nonce("secure_nonce_name"); ?>';
+    </script><?php
 }
 
 add_action('wp_head', 'javascript_variables');

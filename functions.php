@@ -12,3 +12,5 @@ require get_template_directory().'/inc/theme-functions.php';
 require get_template_directory().'/inc/theme-components.php';
 require get_template_directory().'/inc/theme-shortcodes.php';
 require get_template_directory().'/inc/theme-ajax.php';
+
+require get_template_directory().'/inc/ajax-search.php';
