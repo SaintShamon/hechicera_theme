@@ -8,7 +8,6 @@ import {
     header
 } from './template-parts/header/header';
 
-
 import {
     footer
 } from './template-parts/footer/footer';
@@ -17,7 +16,7 @@ import {
     mainslider
 } from './template-parts/blocks/slider';
 
-import './template-parts/blocks/find_us';
+import './template-parts/blocks/where_to_buy';
 
 
 header();

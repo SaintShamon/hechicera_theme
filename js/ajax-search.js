@@ -5,6 +5,8 @@
         let category = $('#oCategoryFilter').val();
         let city = $('#oCityFilter').val();
         let country = $('#oCountryFilter').val();
+        let modal = $('#response .search-modal');
+
 
         let data = {
             action: 'filter_posts',
@@ -17,7 +19,8 @@
             type: 'POST',
             data: data,
             success: function (res) {
-                $('#response').html(res)
+                $('#response .search-modal').html(res);
+                modal.addClass('active');
             },
             error: function (res) {
                 console.warn(res)

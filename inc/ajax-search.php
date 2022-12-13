@@ -46,12 +46,22 @@ function filter_posts()
     $locations = new WP_Query($args);
 
     if ($locations->have_posts()) :
+        echo '<ul class="buy_list">';
         while ($locations->have_posts())  : $locations->the_post();
-             get_template_part('template-parts/find-us-card');
+            get_template_part('template-parts/where-to-buy-item');
         endwhile;
+        echo '</ul>';
+        echo '<div class="close_modal">
+                <span></span>
+                <span></span>
+              </div>';
         wp_reset_postdata();
     else :
-        echo 'Post not found';
+        echo '<div class="not-found">Post not found</div>';
+        echo '<div class="close_modal">
+                <span></span>
+                <span></span>
+              </div>';
     endif;
 
     wp_die();
