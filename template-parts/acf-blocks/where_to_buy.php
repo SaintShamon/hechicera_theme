@@ -69,6 +69,7 @@ if ($title || $content):
                     <div class="select_container">
                         <label for="oCountryFilter">Country</label>
                         <select id="oCountryFilter" name="Country">
+                            <option value="<?php echo null;?>" selected data-display="Select Country">None</option>
                             <?php foreach ($countries as $country) : ?>
                                 <option value="<?php echo $country->slug; ?>"><?php echo $country->name; ?></option>
                             <?php endforeach; ?>
@@ -77,6 +78,7 @@ if ($title || $content):
                     <div class="select_container">
                         <label for="oCityFilter" name="City">City</label>
                         <select id="oCityFilter" name="City">
+                            <option value="<?php echo null;?>" selected data-display="Select City">None</option>
                             <?php foreach ($cities as $city) : ?>
                                 <option value="<?php echo $city->slug; ?>"><?php echo $city->name; ?></option>
                             <?php endforeach; ?>
@@ -85,6 +87,7 @@ if ($title || $content):
                     <div class="select_container">
                         <label for="oCategoryFilter">Category</label>
                         <select id="oCategoryFilter" name="Category">
+                            <option value="<?php echo null;?>" selected data-display="Select Category">None</option>
                             <?php foreach ($categories as $category) : ?>
                                 <option value="<?php echo $category->slug; ?>"><?php echo $category->name; ?></option>
                             <?php endforeach; ?>
