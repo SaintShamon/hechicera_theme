@@ -16,6 +16,8 @@ body
 	-webkit-backface-visibility: hidden
 	-webkit-tap-highlight-color: transparent
 	font-weight: 400
+	&.dark_blue_bg
+		color: $color-yellow
 	+max-screen($breakpoint-xl)
 
 h1, .h1
@@ -344,7 +346,8 @@ h6, .h6
 
 	p,ul,ol
 		color: $color-primary
-
+		.dark_blue_bg &
+			color: $color-yellow
 	a
 		transition: 0.3s
 		color: $color-primary
