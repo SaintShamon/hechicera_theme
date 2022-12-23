@@ -13,7 +13,7 @@ global $post;
 
 $body_classes = 'not-loaded ';
 
-if (is_post_type_archive('our-rums') || is_page_template('cocktails-page.php')) :
+if (is_post_type_archive('cocktails') || is_page_template('cocktails-page.php')) :
     $page_bg = get_field('our_rums_bg_img', 'option');
 elseif (is_front_page()) :
     $page_bg = get_field('home_bg_img', 'option');
@@ -42,7 +42,7 @@ endif;
     <div class="site">
         <?php get_template_part('template-parts/header/header'); ?>
 
-        <?php if (is_post_type_archive('our-rums') || is_front_page() || is_page_template('dark-page.php') || is_page_template('cocktails-page.php'))  : ?>
+        <?php if (is_post_type_archive('cocktails') || is_front_page() || is_page_template('dark-page.php') || is_page_template('cocktails-page.php'))  : ?>
         <main id="main">
             <div class="parallax-bg"
                 style="background: url('<?php echo $page_bg; ?>'); opacity: <?php echo $opacity; ?>">
