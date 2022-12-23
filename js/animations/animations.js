@@ -1,9 +1,19 @@
 import $ from 'jquery';
-import {gsap} from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
-import {ScrollSmoother} from "gsap/ScrollSmoother";
-import {SplitText} from "gsap/SplitText";
-import {CustomEase} from "gsap/CustomEase";
+import {
+    gsap
+} from "gsap";
+import {
+    ScrollTrigger
+} from "gsap/ScrollTrigger";
+import {
+    ScrollSmoother
+} from "gsap/ScrollSmoother";
+import {
+    SplitText
+} from "gsap/SplitText";
+import {
+    CustomEase
+} from "gsap/CustomEase";
 
 
 gsap.registerPlugin(ScrollTrigger, CustomEase, ScrollSmoother, SplitText);
@@ -17,8 +27,12 @@ $(document).ready(function () {
     });
 
     //bg parallax
-    smoother.effects(".parallax-bg", {speed: 0.7});
-    smoother.effects(".bg-parallax", {speed: 'auto'});
+    smoother.effects(".parallax-bg", {
+        speed: 0.7
+    });
+    smoother.effects(".bg-parallax", {
+        speed: 'auto'
+    });
 
     // if ($('body').hasClass('page-template-a_family_from_colombia_page')) {
     //     smoother.effects(".bg-parallax", {speed: 0.9});
@@ -86,69 +100,59 @@ $(document).ready(function () {
             let heroImageLayer_2 = hero.find('.layer-2');
             let heroImageLayer_3 = hero.find('.layer-3');
 
-            heroImageLayer_3.anim = gsap.fromTo(heroImageLayer_3,
-                {
-                    opacity: 0,
-                    scale: 0.9,
-                },
-                {
-                    duration: 0.6,
-                    delay: 0.3,
-                    ease: "circ.out",
-                    opacity: 1,
-                    scale: 1,
-                    stagger: 0.1,
-                }
-            );
-            heroImageLayer_2.anim = gsap.fromTo(heroImageLayer_2,
-                {
-                    opacity: 0,
-                    scale: 0.9,
-                    rotate: -10
-                },
-                {
-                    duration: 0.5,
-                    delay: 0.3,
-                    ease: "circ.out",
-                    opacity: 1,
-                    scale: 1,
-                    rotate: 0,
-                    stagger: 0.1,
-                }
-            );
-            heroImageLayer_1.anim = gsap.fromTo(heroImageLayer_1,
-                {
-                    opacity: 0,
-                    yPercent: -20
-                },
-                {
-                    duration: 0.6,
-                    delay: 0.6,
-                    ease: "circ.out",
-                    opacity: 1,
-                    yPercent: 0
-                }
-            );
-            smoother.effects(heroImageLayer_1, {speed: 0.95});
+            heroImageLayer_3.anim = gsap.fromTo(heroImageLayer_3, {
+                opacity: 0,
+                scale: 0.9,
+            }, {
+                duration: 0.6,
+                delay: 0.3,
+                ease: "circ.out",
+                opacity: 1,
+                scale: 1,
+                stagger: 0.1,
+            });
+            heroImageLayer_2.anim = gsap.fromTo(heroImageLayer_2, {
+                opacity: 0,
+                scale: 0.9,
+                rotate: -10
+            }, {
+                duration: 0.5,
+                delay: 0.3,
+                ease: "circ.out",
+                opacity: 1,
+                scale: 1,
+                rotate: 0,
+                stagger: 0.1,
+            });
+            heroImageLayer_1.anim = gsap.fromTo(heroImageLayer_1, {
+                opacity: 0,
+                yPercent: -20
+            }, {
+                duration: 0.6,
+                delay: 0.6,
+                ease: "circ.out",
+                opacity: 1,
+                yPercent: 0
+            });
+            smoother.effects(heroImageLayer_1, {
+                speed: 0.95
+            });
         }
         //hero image
         const heroSimple = $('.hero-image-simple-animation');
         if (heroSimple.length) {
             let heroImageLayer_1 = hero.find('.layer-1');
 
-            heroImageLayer_1.anim = gsap.fromTo(heroImageLayer_1,
-                {
-                    opacity: 0,
-                    yPercent: 10
-                },
-                {
-                    duration: 0.6,
-                    delay: 0.6,
-                    ease: "circ.out",
-                    opacity: 1,
-                    yPercent: 0
-                }
-            );
+            heroImageLayer_1.anim = gsap.fromTo(heroImageLayer_1, {
+                opacity: 0,
+                yPercent: 10
+            }, {
+                duration: 0.6,
+                delay: 0.6,
+                ease: "circ.out",
+                opacity: 1,
+                yPercent: 0
+            });
         }
 
 
@@ -432,11 +436,17 @@ $(document).ready(function () {
 
         $(".explore").each(function () {
             let block = $(this);
-            let image = $(this).find('.arc-heading');
+            let image = $(this).find('.arc-heading:not(.remove_anim)');
             let palm = $(this).find('.palm');
             //bottle rotation
-            gsap.set(image, {scale: 0.8, opacity: 0, yPercent: 10});
-            gsap.set(palm, {yPercent: 100});
+            gsap.set(image, {
+                scale: 0.8,
+                opacity: 0,
+                yPercent: 10
+            });
+            gsap.set(palm, {
+                yPercent: 100
+            });
             image.anim = gsap.to(image, {
                 scrollTrigger: {
                     trigger: image,
@@ -468,7 +478,9 @@ $(document).ready(function () {
             let block = $(this);
             let image = $(this).find('.image .layer-1');
             //bottle rotation
-            gsap.set(image, {rotate: -10});
+            gsap.set(image, {
+                rotate: -10
+            });
             gsap.to(image, {
                 rotate: 10,
                 ease: "none",
@@ -484,22 +496,19 @@ $(document).ready(function () {
 
     //loader
     const loader = $('.loader-overlay');
-    loader.anim = gsap.fromTo(loader,
-        {
-            opacity: 1
-        },
-        {
-            duration: 0.3,
-            delay: 0.2,
-            ease: "circ.out",
-            opacity: 0,
-            onComplete: function () {
-                loader.hide();
-                $('body').removeClass('not-loaded');
-                appearenceAnimations();
-            }
+    loader.anim = gsap.fromTo(loader, {
+        opacity: 1
+    }, {
+        duration: 0.3,
+        delay: 0.2,
+        ease: "circ.out",
+        opacity: 0,
+        onComplete: function () {
+            loader.hide();
+            $('body').removeClass('not-loaded');
+            appearenceAnimations();
         }
-    );
+    });
 
 
 });

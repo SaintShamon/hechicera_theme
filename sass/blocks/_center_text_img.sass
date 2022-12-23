@@ -43,7 +43,13 @@
         position: relative
         margin: 200px auto
         padding: 60px 30px
-
+        .dark_blue_bg &
+            margin: 0 auto
+            padding: 160px 130px
+            +max-screen($breakpoint-lg)
+                padding: 100px 80px
+            +max-screen(1200px)
+                padding: 30px
         &::after, &::before
             content: ''
             position: absolute
