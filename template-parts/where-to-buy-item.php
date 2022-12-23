@@ -10,8 +10,7 @@ $address = get_field('adress'); ?>
     <?php endif; ?>
     <?php if ($shop_url_list) : ?>
         <?php foreach ($shop_url_list as $shop_url) : ?>
-            <?php var_dump($shop_url);?>
-            <a href="<?php echo esc_url($shop_url['shop_url']['url']); ?>"><?php echo $shop_url['shop_url']['title']; ?></a>
+            <a href="<?php echo esc_url($shop_url['shop_url']['url']); ?>" target="_blank"><?php echo $shop_url['shop_url']['title']; ?></a>
         <?php endforeach; ?>
     <?php endif; ?>
 </div>
