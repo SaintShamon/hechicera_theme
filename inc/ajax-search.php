@@ -8,7 +8,7 @@ function filter_posts()
 {
     $args = [
         'post_type' => 'locations',
-        'post_per_page' => -1,
+        'posts_per_page' => -1,
     ];
 
     $category = $_REQUEST['category']; // data property
