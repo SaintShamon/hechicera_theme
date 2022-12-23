@@ -33,7 +33,13 @@
                 <div class="bottom_title text--size--20">
                     <p><?= $text_in_bottom ?></p>
                     <div class="icon">
-                        <img src="<?= get_template_directory_uri() ?>/assets/images/icon/palm_img.svg" alt="">
+                        <?php if(is_page_template('dark-page.php')): ?>
+                        <img class="palm"
+                            src="<?= get_template_directory_uri() ?>/assets/images/icon/palm_img_white.svg" alt="">
+                        <?php else: ?>
+                        <img class="palm" src="<?= get_template_directory_uri() ?>/assets/images/icon/palm_img.svg"
+                            alt="">
+                        <?php endif; ?>
                     </div>
                 </div>
                 <?php endif; ?>
