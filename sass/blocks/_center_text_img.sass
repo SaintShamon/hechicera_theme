@@ -2,17 +2,6 @@
     height: 100vh
     display: flex
     align-items: center
-    //+min-screen($breakpoint-xxl)
-    //    min-height: 800px
-    //+max-screen($breakpoint-xxl)
-    //    min-height: 720px
-    //+max-screen($breakpoint-xl)
-    //    min-height: 650px
-    //+max-screen($breakpoint-lg)
-    //    min-height: 500px
-    //+max-screen($breakpoint-sm)
-    //    min-height: 400px
-    //    margin-top: 50px
     +min-screen($breakpoint-xxl)
         min-height: 525px
     +max-screen($breakpoint-lg)
@@ -134,10 +123,9 @@
                 font-size: 20px
             +max-screen(1200px)
                 font-size: 18px
-    //.title_block
-    //    text-align: center
-    //    position: relative
-    //    z-index: 1
+        h1,h2,h3,h4,h5,h6
+            .dark_blue_bg &
+                color: $color-primary
 
 .page-template-a_family_from_colombia_page
     .center_text_img
