@@ -50,10 +50,15 @@
             margin-bottom: 30px
         +max-screen($breakpoint-sm)
             padding-top: 30px
+            padding-left: 10px
+            padding-right: 10px
         h2
             text-align: center
             color: $color-white
     .content-block
+        +max-screen($breakpoint-sm)
+            padding-left: 10px
+            padding-right: 10px
         p
             text-align: center
             color: $color-white
@@ -70,6 +75,8 @@
             max-width: 754px
             margin-top: 50px
         +max-screen(1200px)
+        +max-screen($breakpoint-sm)
+            margin-bottom: 60px
 
     &_block
         margin-right: 50px
@@ -79,24 +86,62 @@
             margin-right: 30px
             margin-left: 30px
             margin-bottom: 30px
+        +max-screen($breakpoint-sm)
+            margin-left: auto
+            margin-right: auto
         &:nth-of-type(5)
             margin-right: 0
             +max-screen($breakpoint-md)
                 margin-right: 30px
+            +max-screen($breakpoint-sm)
+                margin-right: auto
         &:nth-of-type(10)
             margin-right: 0
             +max-screen($breakpoint-md)
                 margin-right: 30px
+            +max-screen($breakpoint-sm)
+                margin-right: auto
         &:last-of-type
             margin-right: 0
             +max-screen($breakpoint-md)
                 margin-right: 30px
+            +max-screen($breakpoint-sm)
+                margin-right: auto
         img
             width: max-content
             max-width: 120px
             +max-screen($breakpoint-xl)
                 max-width: 100px
+            +max-screen($breakpoint-sm)
+                display: block
+                margin: 0 auto
             +max-screen(420px)
                 max-width: 80px
             +max-screen(375px)
                 max-width: 100px
+    .slick-dots
+        display: flex
+        width: max-content
+        margin-left: auto
+        margin-right: auto
+        margin-top: 0
+        margin-bottom: 0
+
+        li
+            display: flex
+            align-items: center
+
+        button
+            font-size: 0
+            background: #fff
+            border-radius: 50%
+            width: 9px
+            height: 9px
+            border: 0
+            padding: 0
+            margin-right: 11px
+
+        li.slick-active button
+            width: 12px
+            height: 12px
+            background-color: $color-blue

@@ -15,6 +15,9 @@ import {
 import {
     mainslider
 } from './template-parts/blocks/slider';
+import {
+    awardslider
+} from './template-parts/blocks/awards_slider';
 
 import './template-parts/blocks/where_to_buy';
 
@@ -23,6 +26,7 @@ header();
 footer()
 //lazy();
 mainslider();
+awardslider();
 //scrollToAnchor();
 
 
